@@ -1,3 +1,5 @@
+import "./header.css";
+
 function Header(){
 return(
 
@@ -37,9 +39,7 @@ return(
 <i className="fas fa-search"></i>
 </div>
    
-    
-
-
+  
   </div>
 </div>
 ); 
