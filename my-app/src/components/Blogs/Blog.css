@@ -1,25 +1,31 @@
 .blog{
     padding-top: 20px;
     height: 200px;
-    padding-left: 100px;
+    padding-left: 200px;
     text-align: left;
-    
+    /* flex: 6;
+    display:flexbox; */
+   
 }
 
 .title{
-    font-size: 32px;
+    font-size: 28px;
     font-weight: medium;
     color: #FF6E31;
+    cursor: pointer;
 }
 
 .time{
     font-size: 12px;
-    color: whitesmoke;
+    color: #999;
+    font-weight: lighter;
 }
 
 .qoute{
     font-size: 16px;
-    color: bisque; 
+    color: bisque;
+    font-weight:medium; 
+
 }
 
 

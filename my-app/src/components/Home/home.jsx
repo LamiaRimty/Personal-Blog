@@ -7,7 +7,7 @@ function Home(){
         <div className="home">
             <div className="container-fluid">
             <h1>Memoir</h1>
-            <p>Personal blog by Lamia Jabin Rimty</p>
+            <p>Personal blog by <a href="https://www.linkedin.com/in/lamia-jabin-rimty-0020a2219/">Lamia Jabin Rimty</a></p>
                 
                 {
                     Blogs.map(newBlog=>{

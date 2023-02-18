@@ -18,7 +18,7 @@ const Blogs=[
     {
         id:3,
         title:"Ways of Creating objects JavaScript",
-        time:"December 1,2022 .  🥐 10 min to read",
+        time:"December 1,2022 .  🍱 10 min to read",
         qoute:"Three ways to set you on right path.?" 
     },
 

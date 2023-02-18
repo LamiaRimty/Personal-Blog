@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #243763;
+    background-color: #041938;
     color: #FF6E31;
     font-family: 'Josefin Sans', sans-serif;
     
@@ -16,7 +16,7 @@ body {
     margin-bottom: 0;
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     box-shadow: 0.5px 0.5px  #FF6E31;
 }
 .navbar-header{
@@ -47,8 +47,10 @@ body {
 
  li{
   margin: 10px;
+  font-weight: lighter;
  }
 
 .navbar-nav  li a:hover {
     color: #FF6E31 !important;
 }
+

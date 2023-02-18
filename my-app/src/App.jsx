@@ -1,13 +1,17 @@
 import React from "react";
 import Header from "./components/Header/header";
-import Home from "./components/Home/home"; 
+//import Single from "./components/singleBlog/single";
+import Compose from "./components/Compose/compose";
+//import Home from "./components/Home/home"; 
 import Footer from "./components/Footer/footer";
 
 function App(){
     return(
         <div>
             <Header/>
-            <Home/>
+            <Compose/>
+            {/* <Home/> */}
+            {/* <Single/> */}
             <Footer/>  
     </div>
     );

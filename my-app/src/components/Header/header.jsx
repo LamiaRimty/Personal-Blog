@@ -8,7 +8,7 @@ return(
   <div class="container">
     <div class="navbar-header">
       <p class="navbar-brand" href="">
-       <img className="img" src="https://i.pinimg.com/originals/05/d9/cd/05d9cdb4a4be873427b638610ca68292.jpg" alt="tulip"/>
+       <img className="img" src="https://media.licdn.com/dms/image/C4E03AQFjkJ8sh7Ywaw/profile-displayphoto-shrink_200_200/0/1660130720842?e=1681344000&v=beta&t=sPzIr8wqev46_zVWyDzPlOMcLSmxhcNEguzDrL3PAmk" alt="rimty"/>
         Memoir
         </p>
     </div>
