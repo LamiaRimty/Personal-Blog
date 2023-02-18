@@ -1,0 +1,73 @@
+
+.singleBlog{
+    flex:9;
+    padding-top: 50px;
+    height: 200px;
+    padding-left: 200px;
+    text-align: left;
+    /* flex: 6;
+    display:flexbox; */
+    box-sizing: inherit;
+   
+}
+
+.singleBlogTitle{
+    font-size: 40px;
+    font-weight: medium;
+    color: #FF6E31;
+    cursor: pointer;
+    text-align: center;
+}
+
+.singleBlogTime{
+    font-size: 12px;
+    color: #999;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.blogTranslation{
+    word-break: keep-all;
+    font-family: "system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;";
+    margin-right:5px;
+    
+}
+
+.translatedLanguage a{
+    margin-right:10px;
+    
+}
+span{
+    color: tomato;
+}
+.singleBlogQoute{
+    font-size: 18px;
+    color: bisque;
+    font-weight:normal; 
+    line-height:30px;
+}
+
+.singleBlogQoute::first-letter{
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.singleBlogIcon{
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.singleBlogIcon:first-child{
+    color: teal;
+}
+.singleBlogIcon:last-child{
+    color: tomato;
+}
+
+.singleBlogInfo{
+    margin-top: 20px;
+    color:#b39656;
+}
+
+
