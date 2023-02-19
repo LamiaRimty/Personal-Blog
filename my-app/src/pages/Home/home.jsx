@@ -1,6 +1,6 @@
 import "./home.css"; 
-import Blogs from "../../components/Blogs/Blogs";
-import Blog from "../../components/Blogs/Blog";
+import Blogs from "../../components/Blogs/blogs";
+import Blog from "../../components/Blogs/blog";
 
 function Home(){
     return(

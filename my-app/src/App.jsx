@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./components/Header/header";
 //import Single from "./pages/singleBlog/single";
-//import Compose from "./pages/Compose/compose";
-import Blogs from "./components/Blogs/Blogs";
+import Compose from "./pages/Compose/compose";
+import Blogs from "./components/Blogs/blog";
 import Footer from "./components/Footer/footer";
 import Home from "./pages/Home/home";
 //import SingleBlog from "./pages/singleBlog/singleBlog";
@@ -25,11 +25,14 @@ function App(){
       <Routes>
         <Route exact path="/" element={<Home />}/>
          
-        <Route path="/blogs" element={<Blogs />}/>
+        <Route path="/blog" element={<Blogs />}/>
           
         <Route path="/about" element={<About />}/>
           
-        <Route path="/contact" element={<Contact />}/>    
+        <Route path="/contact" element={<Contact />}/>   
+
+        <Route path="/compose" element={<Compose />}/>   
+        
       </Routes>
       <Footer/>
     </div>

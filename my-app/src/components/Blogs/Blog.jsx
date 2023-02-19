@@ -1,4 +1,4 @@
-import "./Blog.css"
+import "./blog.css"
 function Blog(props){
 
     return(
