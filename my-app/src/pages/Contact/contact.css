@@ -1,5 +1,8 @@
-.about{
-    background-color: powderblue;
+.contact{
     height: 1000px;
     width: 1000px;
+    padding-top: 50px;
+    height: 200px;
+    padding-left: 200px;
+    text-align: left;
 }

@@ -1,5 +1,5 @@
-import SingleBlog from "./singleBlog";
-import "./singleBlog.css";
+import "./single.css";
+import SingleBlog from "../../components/singleBlog/SingleBlog"
 
 function Single(){
     return(

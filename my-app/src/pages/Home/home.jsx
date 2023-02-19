@@ -1,6 +1,6 @@
 import "./home.css"; 
-import Blogs from "../../components/Blogs/blogs";
-import Blog from "../../components/Blogs/blog";
+import BlogFile from "../../components/blogFile/BlogFile";
+import Blogs from "../../components/blogs/Blogs";
 
 function Home(){
     return(
@@ -10,9 +10,9 @@ function Home(){
             <p>Personal blog by <a href="https://www.linkedin.com/in/lamia-jabin-rimty-0020a2219/">Lamia Jabin Rimty</a></p>
                 
                 {
-                    Blogs.map(newBlog=>{
+                    BlogFile.map(newBlog=>{
                        return(
-                        <Blog
+                        <Blogs
                         key={newBlog.id}
                         title={newBlog.title}
                         time={newBlog.time}

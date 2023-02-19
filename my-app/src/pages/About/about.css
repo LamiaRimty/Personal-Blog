@@ -1,5 +1,23 @@
 .about{
-    background-color: chocolate;
+    
     height: 1000px;
     width: 1000px;
+    padding-top: 50px;
+    height: 200px;
+    padding-left: 200px;
+    text-align: left;
+    
 }
+.about-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+   }
+
+   .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }

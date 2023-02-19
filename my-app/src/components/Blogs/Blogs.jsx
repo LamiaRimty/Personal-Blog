@@ -1,27 +1,14 @@
+import BlogFile from "../blogFile/BlogFile";
+import "./blogs.css"
+function Blogs(props){
 
-const Blogs=[
+    return(
+        <div className="blogs">
+            <h1 className="title">{props.title}</h1>
+            <p className="time">{props.time}</p>
+            <p className="qoute">{props.qoute}</p>
+        </div>
+    );
 
-    {
-        id:1,
-        title:"My journey to Web Development",
-        time:"December 1,2022 .  🥐 10 min to read",
-        qoute:"A personal reflection"
-    },
-
-    {
-        id:2,
-        title:"Difference between == and === in javascript",
-        time:"December 1,2022 .  ☕️ 10 min to read",
-        qoute:"Which one to use?" 
-    },
-
-    {
-        id:3,
-        title:"Ways of Creating objects JavaScript",
-        time:"December 1,2022 .  🍱 10 min to read",
-        qoute:"Three ways to set you on right path.?" 
-    },
-
-]
-
+}
 export default Blogs;

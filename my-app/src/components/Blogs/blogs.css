@@ -1,10 +1,8 @@
-.blog{
+.blogs{
     padding-top: 20px;
     height: 200px;
     padding-left: 200px;
     text-align: left;
-    /* flex: 6;
-    display:flexbox; */
    
 }
 
@@ -25,6 +23,7 @@
     font-size: 16px;
     color: bisque;
     font-weight:medium; 
+
 
 }
 
