@@ -1,47 +1,40 @@
 import React from "react";
 import Header from "./components/Header/header";
-import Single from "./pages/singleBlog/single";
-import Compose from "./pages/Compose/compose";
-import Home from "./pages/Home/home";
+//import Single from "./pages/singleBlog/single";
+//import Compose from "./pages/Compose/compose";
 import Blogs from "./components/Blogs/Blogs";
 import Footer from "./components/Footer/footer";
-
+import Home from "./pages/Home/home";
+//import SingleBlog from "./pages/singleBlog/singleBlog";
+import About from "./pages/About/about"
+import Contact from "./pages/Contact/contact";
 
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes,
     Route,
-    Link
+   //Redirect,Navigate
   } from "react-router-dom";
 
 
 function App(){
-    return(   
-            // <Compose/>
-            /* <Home/> */
-            /* <Single/> */
+    return( 
     <Router>
     <div>
-    <Header/>
-      {/* A <Switch> looks through its children <Route>s and
-          renders the first one that matches the current URL. */}
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="/blogs">
-          <Blogs />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
+      <Header/>
+      <Routes>
+        <Route exact path="/" element={<Home />}/>
+         
+        <Route path="/blogs" element={<Blogs />}/>
+          
+        <Route path="/about" element={<About />}/>
+          
+        <Route path="/contact" element={<Contact />}/>    
+      </Routes>
+      <Footer/>
     </div>
-    <Footer/> 
   </Router>
+
     );
 }
 export default App;
