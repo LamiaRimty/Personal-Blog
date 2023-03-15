@@ -8,13 +8,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Blog from "./components/blog/Blog";
 import Blogs from "./pages/blogs/Blogs";
+import ErrorPage from "./pages/error/error-page";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Blogs />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

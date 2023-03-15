@@ -8,15 +8,15 @@ export default function Blogs() {
         <Header />
         <h1>React Router Contacts</h1>
         <article>
-          <a href={`blog/1`}>
-            <h1>My journey to Web Development</h1>
-          </a>
-          <a href={`blog/2`}>
-            <h1>Difference between == and === in javascript</h1>
-          </a>
-          <a href={`blog/3`}>
-            <h1>Ways of Creating objects JavaScript</h1>
-          </a>
+          <h1>
+            <a href={`blog/1`}>My journey to Web Development</a>
+          </h1>
+          <h1>
+            <a href={`blog/2`}>Difference between == and === in javascript</a>
+          </h1>
+          <h1>
+            <a href={`blog/3`}>Ways of Creating objects JavaScript</a>
+          </h1>
         </article>
         <div id="detail"></div>
         <Footer />
