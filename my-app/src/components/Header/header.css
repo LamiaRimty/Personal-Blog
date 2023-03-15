@@ -1,6 +1,4 @@
 body {
-    margin: 0;
-    padding: 0;
     background-color: #041938;
     color: #FF6E31;
     font-family: 'Josefin Sans', sans-serif;
@@ -9,7 +7,7 @@ body {
 
   .navbar {
     width: 100%;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     border: 0;
     border-radius: 0;
@@ -17,11 +15,15 @@ body {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
-    box-shadow: 0.5px 0.5px  #FF6E31;
+    box-shadow: 0px 0.5px  #FF6E31;
     position: sticky;
-    z-index: 999;
-  
+    z-index: 44;
+
 }
+.nav{
+  display: flex;
+}
+
 .navbar-header{
  
   flex: 3 ;
@@ -34,6 +36,7 @@ body {
   font-size: 2.5em;
   font-weight: bold;
   color: #FF6E31;
+  cursor: pointer;
  
 }
  .img{
@@ -49,7 +52,7 @@ body {
  }
 
  li{
-  margin: 10px;
+  margin-right: 30px;
   font-weight: lighter;
  }
 
@@ -57,3 +60,42 @@ body {
     color: #FF6E31 !important;
 }
 
+.header.active{
+position: sticky;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+#sidebar >  form input[type="search"] {
+  width: 100%;
+  padding-left: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='%23999' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0.625rem 0.75rem;
+  background-size: 1rem;
+  position: relative;
+}
+
+#sidebar > div form input[type="search"].loading {
+  background-image: none;
+}
+
+#search-spinner {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23000' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M20 4v5h-.582m0 0a8.001 8.001 0 00-15.356 2m15.356-2H15M4 20v-5h.581m0 0a8.003 8.003 0 0015.357-2M4.581 15H9' /%3E%3C/svg%3E");
+  animation: spin 1s infinite linear;
+  position: absolute;
+  left: 0.625rem;
+  top: 0.75rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
