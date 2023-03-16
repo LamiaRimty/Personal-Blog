@@ -15,7 +15,6 @@ function Blog() {
 
             <p className="time">{blogItem.time}</p>
             <p className="qoute">{blogItem.qoute}</p>
-            {/* <p className="description">{blogItem.description}</p> */}
           </article>
         ))}
       </div>
