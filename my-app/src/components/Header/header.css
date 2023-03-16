@@ -99,3 +99,9 @@ width: 100%;
     transform: rotate(360deg);
   }
 }
+
+@media screen and(max-width:768px) {
+  nav{
+    display: none;
+  }
+}

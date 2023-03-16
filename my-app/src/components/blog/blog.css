@@ -4,10 +4,11 @@ h5{
     text-align: center;
 }
 .blog-container{
-    padding-top: 50px;
+   margin: 50px;
 }
+
 .blog{
-    padding-top: 50px;
+    padding-top: 10px;
     height: 200px;
     padding-left: 200px;
     text-align: left;
@@ -19,6 +20,8 @@ h5{
     font-weight: medium;
     color: #FF6E31;
     cursor: pointer;
+    text-align: left;
+    text-decoration: none;
 }
 
 .time{
@@ -35,5 +38,28 @@ h5{
 
 }
 
-
+.link{
+    outline: none;
+}
+.singleBlog{
+    padding: 50px 0;
+    background-color: alic;
+  }
+  h1{
+  
+    color: antiquewhite;
+    align-items: center;
+    text-align: center;
+  }
+  .desc{
+    margin-top: 10px 0px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .time{
+    padding-top:40px ;
+    font-size: 12px;
+    color: beige;
+    font-weight: lighter;
+  }
 

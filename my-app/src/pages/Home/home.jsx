@@ -1,8 +1,5 @@
 import "./home.css";
-// import BlogFile from "../../components/blogFile/BlogFile";
-// import Blog from "../../components/blog/Blog";
-//import Category from "../../components/category/Category";
-
+import Blog from "../../components/blog/Blog";
 function Home() {
   return (
     <div className="home">
@@ -16,16 +13,7 @@ function Home() {
         </p>
       </div>
       <div className="home-blog-list">
-        {/* {BlogFile.map((newBlog) => {
-          return (
-            <Blog
-              key={newBlog.id}
-              title={newBlog.title}
-              time={newBlog.time}
-              qoute={newBlog.qoute}
-            />
-          );
-        })} */}
+        <Blog />
       </div>
       {/* <Category/> */}
     </div>
