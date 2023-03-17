@@ -36,18 +36,18 @@ function Header() {
                   HOME
                 </Link>
               </li>
-
-              <li id="blogs">
-                <Link to="/blogs" class="nav-link">
-                  BLOGS
-                </Link>
-              </li>
-
               <li id="about">
                 <Link to="/about" class="nav-link">
                   ABOUT
                 </Link>
               </li>
+
+              <li id="skills">
+                <Link to="/skills" class="nav-link">
+                  SKILLS
+                </Link>
+              </li>
+
               <li id="contact">
                 <Link to="/contact" class="nav-link">
                   CONTACT
