@@ -1,10 +1,10 @@
 import "./about.css";
 function About() {
   return (
-    <div className="about">
+    <section className="about">
       <h1 className="about-title">About Me</h1>
       <h5>Get to Know</h5>
-      <div className="about-container">
+      <div className="container about-container">
         <div className="aboutMyImg">
           <div className="about-img">
             <img
@@ -32,7 +32,7 @@ function About() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default About;

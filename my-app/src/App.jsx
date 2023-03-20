@@ -2,9 +2,9 @@ import "./App.css";
 import React from "react";
 import Header from "./components/header/Header";
 import Compose from "./pages/compose/Compose";
-//import Blogs from "./pages/blogs/Blogs";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
+import Skills from "./pages/skills/Skills";
 //import Single from "./pages/single/Single";
 //import SingleBlog from "./components/singleBlog/SingleBlog";
 import About from "./pages/about/About";
@@ -34,7 +34,7 @@ function App() {
           <Route exact path="/details/:id" element={<Details />} />
 
           <Route path="/about" element={<About />} />
-
+          <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/compose" element={<Compose />} />

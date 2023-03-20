@@ -2,8 +2,8 @@ import "./home.css";
 import Blog from "../../components/blog/Blog";
 function Home() {
   return (
-    <div className="home">
-      <div className="container-fluid">
+    <section className="home">
+      <div className="container container-fluid">
         <h1 className="heading">Memoir</h1>
         <p>
           Personal blog by{" "}
@@ -12,11 +12,9 @@ function Home() {
           </a>
         </p>
       </div>
-      <div className="home-blog-list">
-        <Blog />
-      </div>
+      <Blog />
       {/* <Category/> */}
-    </div>
+    </section>
   );
 }
 export default Home;

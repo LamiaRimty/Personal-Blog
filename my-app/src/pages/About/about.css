@@ -9,12 +9,12 @@
     
 } */
 .about-title{
- margin-top: 10px;
+ /* margin-top: 10px; */
 text-align: center;
 color: orangered;
 }
 .about-container{
-    padding-top: 50px;
+    /* padding-top: 50px; */
     display: grid;
     grid-template-columns: 35% 40%;
     gap: 10%;
@@ -52,20 +52,48 @@ color: orangered;
      transform: rotate(0);
    } 
 
+   .btn-info {
+    background: mediumseagreen;
+    background-image: -webkit-linear-gradient(top, mediumseagreen, #1abc9c );
+    background-image: -moz-linear-gradient(top, mediumseagreen, #1abc9c );
+    background-image: -ms-linear-gradient(top, mediumseagreen, #1abc9c );
+    background-image: -o-linear-gradient(top, mediumseagreen, #1abc9c );
+    background-image: linear-gradient(to bottom, mediumseagreen, #1abc9c );
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    
+  }
+  
+  .btn-info:hover {
+    background: darkseagreen;
+    background-image: -webkit-linear-gradient(top, darkseagreen, seagreen);
+    background-image: -moz-linear-gradient(top, darkseagreen, seagreen);
+    background-image: -ms-linear-gradient(top, darkseagreen, seagreen);
+    background-image: -o-linear-gradient(top, darkseagreen, seagreen);
+    background-image: linear-gradient(to bottom, darkseagreen, seagreen);
+    text-decoration: none;
+  }
+
+
    @media screen  and(max-width: 1024px){
     .about-container{
-        padding-top: 100px;
+        /* padding-top: 100px; */
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0;
     }
     .aboutMyImg{
- 
-        width: 100%;
+        width: 50%;
         margin: 2rem auto 1rem;
        }
    }
-   @media screen  and(max-width: 1024px){
+   @media screen  and(max-width: 600px){
     .about{
        width: 65%; 
        margin:0 auto 16px;
@@ -74,3 +102,4 @@ color: orangered;
       margin: 25px 0;
     }
    }
+

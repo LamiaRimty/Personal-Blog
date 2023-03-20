@@ -1,6 +1,7 @@
 export const blog = [
     {
       id: 1,
+      image:"https://c.stocksy.com/a/2bL800/z9/1989644.jpg",
       title: "My journey to Web Development",
       time: "December 1,2022 .  🥐 10 min to read",
       qoute: "A personal reflection",
@@ -10,6 +11,7 @@ export const blog = [
   
     {
       id: 2,
+      image:"https://eatwelltraveloften.online/wp-content/uploads/2016/08/IMG_0083-1080x720.jpg",
       title: "Difference between == and === in javascript",
       time: "December 1,2022 .  ☕️ 10 min to read",
       qoute: "Which one to use?",
@@ -19,6 +21,7 @@ export const blog = [
   
     {
       id: 3,
+      image:"https://media.istockphoto.com/id/516019979/photo/amsterdam-summer-sunrise.jpg?s=612x612&w=0&k=20&c=YnYn52rR0J_YINkjK8JPMTfnrqRn1E2AzlLayNOgnC4=",
       title: "Ways of Creating objects JavaScript",
       time: "December 1,2022 .  🍱 10 min to read",
       qoute: "Three ways to set you on right path.?",

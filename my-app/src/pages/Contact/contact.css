@@ -1,12 +1,17 @@
-.contact{
-    height: 1000px;
+.contact-container{
+    /* height: 1000px;
     width: 1000px;
     padding-top: 50px;
     height: 200px;
     padding-left: 200px;
-    text-align: left;
-}
+    text-align: left; */
+    width: 58%;
+    display: grid;
+    grid-template-rows: 58% 30%;
+    background-color: grey;
 
+}
+/*
 .form{
     margin-top: 30px;
 }
@@ -25,8 +30,8 @@
 }
 .form label,form span{
     margin-bottom:10px ;
-}
-.contactBtn {
+} */
+/* .contactBtn {
     background:#FF6E31 ;
     background-image: -webkit-linear-gradient(top, #FF6E31, tomato);
     background-image: -moz-linear-gradient(top,#FF6E31,tomato );
@@ -55,4 +60,4 @@
     background-image: -o-linear-gradient(top,powderblue,blue);
     background-image: linear-gradient(to bottom, powderblue,blue);
     text-decoration: none;
-  }
+  } */
