@@ -40,6 +40,9 @@
 .home-img{
 background: transparent;
 opacity: 0.4;
+object-fit: cover;
+height:700px;
+
 }
 
 /* .heading{
