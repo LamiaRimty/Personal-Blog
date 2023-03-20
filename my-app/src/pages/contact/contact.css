@@ -1,0 +1,99 @@
+/* .contact-container{
+    width: 1000px;
+    padding-top: 50px;
+    height: 200px;
+    padding-left: 200px;
+} */
+.contact-container{
+
+    width: 58%;
+    display: grid;
+    grid-template-columns: 58%;
+    gap:15px ;
+    resize: none;
+    
+}
+
+.form{
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+ 
+}
+
+input,textarea{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid skyblue;
+    color: aliceblue;
+}
+/*
+.form input, form label,form span, form textarea{
+    display: block;
+}
+
+.form input,form textarea{
+    margin-bottom:30px ;
+    padding: 8px;
+    border-radius: 5px;
+    border: 0;
+    width: 500px;
+    color: var(--secondary);
+}
+.form label,form span{
+    margin-bottom:10px ;
+} */
+.contactBtn {
+    background:#FF6E31 ;
+    background-image: -webkit-linear-gradient(top, #FF6E31, tomato);
+    background-image: -moz-linear-gradient(top,#FF6E31,tomato );
+    background-image: -ms-linear-gradient(top,#FF6E31,tomato );
+    background-image: -o-linear-gradient(top,#FF6E31,tomato );
+    background-image: linear-gradient(to bottom,#FF6E31,tomato);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+  }
+  
+  .contactBtn:hover {
+    background:powderblue;
+    background-image: -webkit-linear-gradient(top,powderblue,blue);
+    background-image: -moz-linear-gradient(top, powderblue, blue);
+    background-image: -ms-linear-gradient(top, powderblue, blue);
+    background-image: -o-linear-gradient(top,powderblue,blue);
+    background-image: linear-gradient(to bottom, powderblue,blue);
+    text-decoration: none;
+  }
+
+  .social-contact{
+    display: flex;
+    gap: 5px;
+    margin-left: auto;
+  }
+
+  @media screen  and (max-width: 1024px){ 
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+    .social-contact{
+        margin: auto;
+      }
+    }
+    
+    @media screen and (max-width:600px) {
+        .contact-container{
+            width: var(--container-width-sm);
+        }
+    }

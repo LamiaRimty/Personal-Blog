@@ -3,13 +3,13 @@ function About() {
   return (
     <section className="about">
       <h1 className="about-title">About Me</h1>
-      <h5>Get to Know</h5>
+      <h5>My Introduction</h5>
       <div className="container about-container">
         <div className="aboutMyImg">
           <div className="about-img">
             <img
               className="about-img"
-              src="https://scontent-ams4-1.xx.fbcdn.net/v/t39.30808-6/314409068_3457665244515886_1745854450779409135_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=GQQ4ZwbwjzsAX8EK_QQ&_nc_ht=scontent-ams4-1.xx&oh=00_AfDgVdEYTkbhyB73zPXFz2Bn-QFbYlxnQB_RbA794LrpOA&oe=64185000"
+              src="https://scontent-ams4-1.xx.fbcdn.net/v/t39.30808-6/314409068_3457665244515886_1745854450779409135_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=vcHA1NEHWPMAX-gNWqT&_nc_ht=scontent-ams4-1.xx&oh=00_AfD_NEKTXBYvT_riJfmESQWglOwdKr9f38TwmA1eM-4n1g&oe=641E3EC0"
               alt="rimty"
             />
           </div>
@@ -30,6 +30,9 @@ function About() {
           <a href="#contact" className="btn btn-info">
             Let's talk
           </a>
+          {/* <a download="" href={CV} className="btn btn-info">
+            Download CV
+          </a> */}
         </div>
       </div>
     </section>
