@@ -14,12 +14,13 @@ text-align: center;
 color: orangered;
 }
 .about-container{
-    /* padding-top: 50px; */
+  
     display: grid;
     grid-template-columns: 35% 40%;
     gap: 10%;
 }
 .aboutMyImg{
+  margin-top: 60px;
     margin-bottom: 1px;
     margin-left: 200px;
 
@@ -32,11 +33,9 @@ color: orangered;
     
    }
 
-   /* .info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   } */
+   .info{
+    margin-top: 60px;
+   }
   
     
   

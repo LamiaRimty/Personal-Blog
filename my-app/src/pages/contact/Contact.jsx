@@ -9,8 +9,7 @@ function Contact() {
       <h2>Contact Me</h2>
       <h5>
         Get In Touch.If you love reading as much I do.If you love reading as
-        much I do? Let's talk about coding & some books!. My Email:
-        rimtycse@email.com
+        much I do? Let's talk about coding & some books!.
       </h5>
       <div className="container contact-container">
         <form className="form" action="">
