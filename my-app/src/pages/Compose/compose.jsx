@@ -2,6 +2,27 @@ import React, { useState } from "react";
 import "./compose.css";
 
 function Compose() {
+  const [post, setPost] = useState({
+    image: "",
+    title: "",
+    time: "",
+    qoute: "",
+    description: "",
+  });
+  function handleChange(event) {
+    const { name, value } = event.target;
+    console.log(name);
+    console.log(value);
+    setPost((prevPost) => {
+      return {
+        ...prevPost,
+        [name]: value,
+      };
+    });
+  }
+
+  function submitPost() {}
+
   return (
     <>
       <section id="composeBlog">
@@ -77,7 +98,12 @@ function Compose() {
               ></textarea>
             </div>
 
-            <button className="composeBlogBtn" type="submit" autoComplete="off">
+            <button
+              onClick={submitPost}
+              className="composeBlogBtn"
+              type="submit"
+              autoComplete="off"
+            >
               Publish
             </button>
           </form>
