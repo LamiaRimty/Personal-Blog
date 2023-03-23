@@ -19,6 +19,10 @@ import {
 import Details from "./pages/details/Details";
 
 function App() {
+  function addPost(post) {
+    console.log(post);
+  }
+
   return (
     <Router>
       <div>
@@ -35,7 +39,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/compose" element={<Compose />} />
+          <Route path="/compose" element={<Compose onAdd={addPost} />} />
         </Routes>
         <Footer />
       </div>

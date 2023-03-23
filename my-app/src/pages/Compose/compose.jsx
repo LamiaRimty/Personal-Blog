@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./compose.css";
 
-function Compose() {
+function Compose(props) {
   const [post, setPost] = useState({
     image: "",
     title: "",
@@ -21,7 +21,10 @@ function Compose() {
     });
   }
 
-  function submitPost() {}
+  function submitPost(event) {
+    props.onAdd(post);
+    event.preventDefault();
+  }
 
   return (
     <>
