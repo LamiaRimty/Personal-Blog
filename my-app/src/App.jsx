@@ -32,11 +32,9 @@ function App() {
           />
 
           <Route exact path="/details/:id" element={<Details />} />
-
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
-
           <Route path="/compose" element={<Compose />} />
         </Routes>
         <Footer />

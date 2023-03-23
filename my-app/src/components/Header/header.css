@@ -25,10 +25,9 @@ body {
 }
 
 .navbar-header{
- 
-  /* flex: 3 ; */
+
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
  }
  .navbar-brand{
@@ -58,7 +57,6 @@ body {
  }
 
  li{
-  /* margin-right: 30px; */
   font-weight: lighter;
  }
 
