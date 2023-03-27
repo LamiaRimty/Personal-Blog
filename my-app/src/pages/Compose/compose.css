@@ -43,6 +43,14 @@ input{
     position: relative;
 }
 
+/* #composeEdit{
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid lightgrey;
+}
+.editor{
+height: 100%;
+} */
 
 .composeBlogBtn {
     background: mediumseagreen;

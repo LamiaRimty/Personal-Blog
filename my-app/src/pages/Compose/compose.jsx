@@ -1,30 +1,40 @@
 import React, { useState } from "react";
 import "./compose.css";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
 
-function Compose(props) {
-  const [post, setPost] = useState({
-    image: "",
-    title: "",
-    time: "",
-    qoute: "",
-    description: "",
-  });
-  function handleChange(event) {
-    const { name, value } = event.target;
-    console.log(name);
-    console.log(value);
-    setPost((prevPost) => {
-      return {
-        ...prevPost,
-        [name]: value,
-      };
-    });
-  }
+function Compose() {
+  const [image, setImage] = useState("");
+  const [title, setTitle] = useState("");
+  const [time, setTime] = useState("");
+  const [qoute, setQoute] = useState("");
+  const [description, setDescription] = useState("");
 
-  function submitPost(event) {
-    props.onAdd(post);
-    event.preventDefault();
-  }
+  // const [value, setValue] = useState("");
+  // console.log(value);
+  // const [post, setPost] = useState({
+  //   image: "",
+  //   title: "",
+  //   time: "",
+  //   qoute: "",
+  //   description: "",
+  // });
+  // function handleChange(event) {
+  //   const { name, value } = event.target;
+  //   console.log(name);
+  //   console.log(value);
+  //   setPost((prevPost) => {
+  //     return {
+  //       ...prevPost,
+  //       [name]: value,
+  //     };
+  //   });
+  // }
+
+  // function submitPost(event) {
+  //   props.onAdd(post);
+  //   event.preventDefault();
+  // }
 
   return (
     <>
@@ -42,8 +52,8 @@ function Compose(props) {
               <label>Cover Photo</label>
               <input
                 name="image"
-                value={post.image}
-                onChange={handleChange}
+                // value={post.image}
+                // onChange={handleChange}
                 className="composeBlog"
                 type="file"
                 autoFocus={true}
@@ -53,8 +63,8 @@ function Compose(props) {
               <label>Title</label>
               <input
                 name="title"
-                value={post.title}
-                onChange={handleChange}
+                // value={post.title}
+                // onChange={handleChange}
                 className="composeBlog"
                 type="text"
                 placeholder="Title"
@@ -65,8 +75,8 @@ function Compose(props) {
               <label>Time</label>
               <input
                 name="time"
-                value={post.time}
-                onChange={handleChange}
+                //  value={post.time}
+                // onChange={handleChange}
                 className="composeBlog"
                 type="time"
                 placeholder="Time"
@@ -78,8 +88,8 @@ function Compose(props) {
               <label>Qoute</label>
               <input
                 name="qoute"
-                value={post.qoute}
-                onChange={handleChange}
+                // value={post.qoute}
+                // onChange={handleChange}
                 className="composeBlog"
                 type="text"
                 placeholder="Qoute"
@@ -87,22 +97,32 @@ function Compose(props) {
               />
             </div>
 
-            <div className="composeFormGroup">
+            <div className="composeFormGroup" id="composeEdit">
               <label>Description</label>
               <textarea
                 name="description"
-                value={post.description}
-                onChange={handleChange}
+                //  value={post.description}
+                //   onChange={handleChange}
                 className="composeBlog"
                 type="text"
                 placeholder="Write a blog..."
                 cols="30"
                 rows="10"
               ></textarea>
+              {/* <ReactQuill
+                theme="snow"
+                value={value}
+                onChange={setValue}
+                className="composeBlog editor"
+                type="text"
+                placeholder="Qoute"
+                autoFocus={true}
+              /> */}
+              ;
             </div>
 
             <button
-              onClick={submitPost}
+              // onClick={submitPost}
               className="composeBlogBtn"
               type="submit"
               autoComplete="off"

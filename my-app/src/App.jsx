@@ -1,5 +1,4 @@
 import "./App.css";
-import React from "react";
 import Header from "./components/header/Header";
 import Compose from "./pages/compose/Compose";
 import Footer from "./components/footer/Footer";
@@ -19,9 +18,13 @@ import {
 import Details from "./pages/details/Details";
 
 function App() {
-  function addPost(post) {
-    console.log(post);
-  }
+  // const [posts, setPosts] = useState([]);
+
+  // function addPost(newPost) {
+  //   setPosts((prevPosts) => {
+  //     return [...prevPosts, newPost];
+  //   });
+  // }
 
   return (
     <Router>
@@ -39,7 +42,20 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/compose" element={<Compose onAdd={addPost} />} />
+          <Route path="/compose" element={<Compose />} />
+          {/* <Route path="/compose" element={<Compose onAdd={addPost} />} /> */}
+          {/* {posts.map((postItem) => {
+            return (
+              <Blog
+                key={postItem.id}
+                image={postItem.image}
+                title={postItem.title}
+                time={postItem.time}
+                qoute={postItem.qoute}
+                description={postItem.description}
+              />
+            );
+          })} */}
         </Routes>
         <Footer />
       </div>

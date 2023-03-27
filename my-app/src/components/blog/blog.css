@@ -69,6 +69,7 @@ h5{
 
 .link{
     outline: none;
+    color: transparent;
 }
 /* .singleBlog{
     padding: 50px 0;

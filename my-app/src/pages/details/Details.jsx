@@ -21,7 +21,7 @@ function Details() {
           <article className="singleBlog">
             <div className="container">
               <h1>{blogPosts.title}</h1>
-              <img src={blogPosts.image} />
+              <img src={blogPosts.image} alt="" />
               <p className="time">{blogPosts.time}</p>
               <p className="desc">{blogPosts.description}</p>
               {/* <p className="desc">
