@@ -3,17 +3,17 @@ const app = express()
 const dotenv = require("dotenv");
 dotenv.config();
 const mongoose = require('mongoose');
-
+app.use(express.json())
 
 mongoose.connect(`${process.env.MONGO_URL}`,
   {
-    useUnifiedTopology:true,
+   
     useNewUrlParser: true,
     
   }
   )
   .then(() => {
-    console.log("Successfully connected to DB");
+    console.log("Successfully connected to Database");
   })
   .catch((error) => {
     console.log(`can not connect to database, ${error}`);
