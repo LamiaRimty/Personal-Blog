@@ -55,6 +55,7 @@ app.get("/backend/blogs/:id",(req,res)=>{
 app.post("/backend/blogs",(req,res)=>{
   const blog ={
     id: blogs.length+1,
+    image: req.body.image,
     title: req.body.title,
     time: req.body.time,
     qoute:req.body.qoute,
