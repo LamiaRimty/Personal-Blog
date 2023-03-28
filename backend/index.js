@@ -42,8 +42,12 @@ app.get("/backend/blogs",(req,res)=>{
 })
 
 app.get("/backend/blogs/:id",(req,res)=>{ 
-  const id= blogs.find((b)=>b.id=== parseInt(id));
-  res.send(id);
+  const blog= blogs.find((b)=>b.id=== parseInt(req.params.id));
+
+  if(!blog){
+    res.status(404).send("Sorry this blog with given the id is not available!");
+  } 
+  res.send(blog);
 })
 
 
