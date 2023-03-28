@@ -33,6 +33,17 @@ const blogs = [
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
   },
+
+
+  {
+    id: 4,
+    image:"https://www.discoverbenelux.com/wp-content/uploads/2015/09/SF_Gouda_003.jpg",
+    title: "abc",
+    time: "December 13,2023 .  🍱 10 min to read",
+    qoute: "Gouda Cheese Market",
+    description:
+      "If you enjoy insights into culinary traditions and regional heritage it’s well worth taking a look at Gouda’s long-established weekly cheese market. Every Thursday during the summer months (subject to weather), locals don traditional costumes to convey how the Gouda cheese market was in bygone times. You’ll see a dozen or so people dressed as farmers, maids in lace bonnets and red aprons as well as cheese shop owners wearing white jackets and flat caps. Men recreate intense price negotiations between cheese producing farmers and buyers. It’s a dramatic and historically accurate scene.",
+  },
 ]
 
 app.get("/",(req,res)=>{  //route handler function
@@ -55,24 +66,11 @@ app.get("/backend/blogs/:id",(req,res)=>{
 
 app.post("/backend/blogs",(req,res)=>{
 
-  const schema = Joi.object({
-    title: Joi.string()
-        .min(3)
-        .max(30)
-        .required(),
+  // const result =validateBlog(req.body);
+  const {error} =validateBlog(req.body); // 3.validate
 
-    access_token: [
-        Joi.string(),
-        Joi.number()
-    ],
-
-})
-
-const result =schema.validate(req.body);
-
-if(result.error){
-    //400 Bad req
-    res.status(400).send(result.error.details[0].message);
+if(error){
+    res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
     return;
 }
 
@@ -98,13 +96,11 @@ app.put("/backend/blogs/:id",(req,res)=>{
   }
   console.log(blog);
 
-// 3.validate
-// 4.if invalid,return 400 bad req
-  const result =validateBlog(req.body);
 
-if(result.error){
-    //400 Bad req
-    res.status(400).send(result.error.details[0].message);
+  const {error} =validateBlog(req.body);
+
+if(error){
+    res.status(400).send(error.details[0].message);
     return;
 }
 
