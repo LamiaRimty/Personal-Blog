@@ -1,4 +1,5 @@
 const express = require('express')
+const Joi = require('joi');
 const app = express();
 app.use(express.json()); //json returns middleware
 
@@ -53,6 +54,28 @@ app.get("/backend/blogs/:id",(req,res)=>{
 
 
 app.post("/backend/blogs",(req,res)=>{
+
+  const schema = Joi.object({
+    title: Joi.string()
+        .min(3)
+        .max(30)
+        .required(),
+
+    access_token: [
+        Joi.string(),
+        Joi.number()
+    ],
+
+})
+
+const result =schema.validate(req.body);
+
+if(result.error){
+    //400 Bad req
+    res.status(400).send(result.error.details[0].message);
+    return;
+}
+
   const blog ={
     id: blogs.length+1,
     image: req.body.image,
