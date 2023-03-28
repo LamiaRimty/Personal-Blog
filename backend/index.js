@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.get("/",(req,res)=>{  //route jandler function
+app.get("/",(req,res)=>{  //route handler function
   res.send("Hey There!!!!");
 })
 
@@ -14,6 +14,15 @@ app.get("/backend/blogs",(req,res)=>{
     ]
   );
 })
+
+app.get("/backend/blogs/:id",(req,res)=>{ 
+  res.send(req.params.id)
+})
+
+app.get("/backend/blogs/:year/:month/:day",(req,res)=>{ 
+  res.send(req.query)
+})
+
 
 
 // const dotenv = require("dotenv");
