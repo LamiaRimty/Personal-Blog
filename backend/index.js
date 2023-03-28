@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express();
+app.use(express.json()); //json returns middleware
 
 const blogs = [
   {
@@ -51,11 +52,23 @@ app.get("/backend/blogs/:id",(req,res)=>{
 })
 
 
+app.post("/backend/blogs",(req,res)=>{
+  const blog ={
+    id: blogs.length+1,
+    title: req.body.title,
+    time: req.body.time,
+    qoute:req.body.qoute,
+    description:req.body.description
+  }
+  blogs.push(blog);
+  res.send(blog);
+})
+
 
 // const dotenv = require("dotenv");
 // dotenv.config();
 // const mongoose = require('mongoose');
-// app.use(express.json())
+
 
 // mongoose.connect(`${process.env.MONGO_URL}`,
 //   {
