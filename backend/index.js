@@ -88,6 +88,53 @@ if(result.error){
   res.send(blog);
 })
 
+app.put("/backend/blogs/:id",(req,res)=>{
+  //1.look up the blog
+//2.if not exit ,return 404
+  const blog = blogs.find( c => c.id ===parseInt(req.params.id));
+  if(!blog)
+  {
+    res.status(404).send("Sorry this blog with given the id is not available!");
+  }
+  console.log(blog);
+
+// 3.validate
+// 4.if invalid,return 400 bad req
+  const result =validateBlog(req.body);
+
+if(result.error){
+    //400 Bad req
+    res.status(400).send(result.error.details[0].message);
+    return;
+}
+
+// 5,update log
+blog.title = req.body.title;
+blog.image = req.body.image;
+blog.time= req.body.image;
+blog.qoute = req.body.qoute;
+blog.description= req.body.description;
+// 6.return the update course
+res.render(blog);
+})
+
+function validateBlog(blog){
+const schema = Joi.object({
+  title: Joi.string()
+      .min(3)
+      .max(30)
+      .required(),
+
+  access_token: [
+      Joi.string(),
+      Joi.number()
+  ],
+
+})
+
+return schema.validate(blog);
+
+}
 
 // const dotenv = require("dotenv");
 // dotenv.config();
