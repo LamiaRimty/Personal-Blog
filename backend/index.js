@@ -35,7 +35,8 @@ app.get("/backend/blogs",(req,res)=>{
 //     console.log(`can not connect to database, ${error}`);
 //   });
 
-
-app.listen(3000, () => {
-  console.log(`Backend server listening`)
+//PORT
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Backend server listening on ${port}...`);
 })
