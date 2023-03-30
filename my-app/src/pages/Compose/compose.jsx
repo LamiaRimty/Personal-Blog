@@ -4,11 +4,11 @@ import "./compose.css";
 // import "react-quill/dist/quill.snow.css";
 
 function Compose() {
-  const [image, setImage] = useState("");
-  const [title, setTitle] = useState("");
-  const [time, setTime] = useState("");
-  const [qoute, setQoute] = useState("");
-  const [description, setDescription] = useState("");
+  // const [image, setImage] = useState("");
+  // const [title, setTitle] = useState("");
+  // const [time, setTime] = useState("");
+  // const [qoute, setQoute] = useState("");
+  // const [description, setDescription] = useState("");
 
   // const [value, setValue] = useState("");
   // console.log(value);

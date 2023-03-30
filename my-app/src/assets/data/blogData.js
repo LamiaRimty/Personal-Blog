@@ -1,4 +1,4 @@
-export const blog = [
+export const blogs = [
     {
       id: 1,
       image:"https://c.stocksy.com/a/2bL800/z9/1989644.jpg",

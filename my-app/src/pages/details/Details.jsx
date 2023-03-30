@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { blog } from "../../assets/data/blogData";
+import { blogs } from "../../assets/data/blogData";
 import "./details.css";
 
 function Details() {
@@ -8,7 +8,7 @@ function Details() {
   const [blogPosts, setBlogPosts] = useState(null);
 
   useEffect(() => {
-    let blogPosts = blog.find((blogItems) => blogItems.id === parseInt(id));
+    let blogPosts = blogs.find((blogItems) => blogItems.id === parseInt(id));
     if (blogPosts) {
       setBlogPosts(blogPosts);
     }
