@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { blogs } from "../../assets/data/blogData";
 import "./details.css";
 
 function Details() {
   const { id } = useParams();
-  const [blogPosts, setBlogPosts] = useState(null);
+  const [blogPost, setBlogPost] = useState(null);
+  const location = useLocation();
+  console.log(location.pathname.split("/")[2]);
 
   useEffect(() => {
-    let blogPosts = blogs.find((blogItems) => blogItems.id === parseInt(id));
-    if (blogPosts) {
-      setBlogPosts(blogPosts);
+    let blogPost = blogs.find((b) => b.id === parseInt(id));
+    if (blogPost) {
+      setBlogPost(blogPost);
     }
   }, []);
 
   return (
     <>
       <section id="details">
-        {blogPosts ? (
+        {blogPost ? (
           <article className="singleBlog">
             <div className="container">
-              <h1>{blogPosts.title}</h1>
-              <img src={blogPosts.image} alt="" />
-              <p className="time">{blogPosts.time}</p>
-              <p className="desc">{blogPosts.description}</p>
+              <h1>{blogPost.title}</h1>
+              <img src={blogPost.image} alt="" />
+              <p className="time">{blogPost.time}</p>
+              <p className="desc">{blogPost.description}</p>
               {/* <p className="desc">
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from

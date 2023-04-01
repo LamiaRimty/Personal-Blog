@@ -11,7 +11,7 @@ function Blog() {
     fetch(`http://localhost:8000/backend/blogs`)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        //console.log(json);
         setBlogs(json);
       });
   };
