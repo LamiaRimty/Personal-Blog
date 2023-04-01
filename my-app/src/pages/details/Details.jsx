@@ -1,19 +1,37 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
-import { blogs } from "../../assets/data/blogData";
+import { useParams } from "react-router-dom";
 import "./details.css";
+import axios from "axios";
 
 function Details() {
   const { id } = useParams();
   const [blogPost, setBlogPost] = useState(null);
-  const location = useLocation();
-  console.log(location.pathname.split("/")[2]);
 
+  // const fetchBlogs = async () => {
+  //   const responseBlog = await axios.get(`http://localhost:8000/backend/blogs`);
+  //   setBlogs(responseBlog.data);
+  // };
+
+  // useEffect(() => {
+  //   fetchBlogs();
+  // }, []);
+
+  // useEffect(() => {
+  //   const getBlog = async () => {
+  //     const res = await axios.get(`http://localhost:8000/backend/blogs/${id}`);
+  //     console.log(res);
+  //     setBlogPost(res.data);
+  //   };
+  //   getBlog();
+  // }, [id]);
+
+  const fetchBlogDetails = async () => {
+    const res = await axios.get(`http://localhost:8000/backend/blogs/${id}`);
+    //console.log(res);
+    setBlogPost(res.data);
+  };
   useEffect(() => {
-    let blogPost = blogs.find((b) => b.id === parseInt(id));
-    if (blogPost) {
-      setBlogPost(blogPost);
-    }
+    fetchBlogDetails();
   }, []);
 
   return (

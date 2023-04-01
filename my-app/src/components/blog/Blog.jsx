@@ -3,21 +3,18 @@ import React from "react";
 import { json, Link } from "react-router-dom";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Blog() {
   const [blogs, setBlogs] = useState([]);
 
-  const fetchPost = () => {
-    fetch(`http://localhost:8000/backend/blogs`)
-      .then((res) => res.json())
-      .then((json) => {
-        //console.log(json);
-        setBlogs(json);
-      });
+  const fetchBlogs = async () => {
+    const responseBlog = await axios.get(`http://localhost:8000/backend/blogs`);
+    setBlogs(responseBlog.data);
   };
 
   useEffect(() => {
-    fetchPost();
+    fetchBlogs();
   }, []);
 
   return (
