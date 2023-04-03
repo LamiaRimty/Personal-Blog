@@ -1,14 +1,15 @@
+import { Axios } from "axios";
 import React, { useState } from "react";
 import "./compose.css";
 // import ReactQuill from "react-quill";
 // import "react-quill/dist/quill.snow.css";
 
 function Compose() {
-  // const [image, setImage] = useState("");
-  // const [title, setTitle] = useState("");
-  // const [time, setTime] = useState("");
-  // const [qoute, setQoute] = useState("");
-  // const [description, setDescription] = useState("");
+  const [image, setImage] = useState(null);
+  const [title, setTitle] = useState("");
+  const [time, setTime] = useState("");
+  const [qoute, setQoute] = useState("");
+  const [description, setDescription] = useState("");
 
   // const [value, setValue] = useState("");
   // console.log(value);
@@ -31,10 +32,18 @@ function Compose() {
   //   });
   // }
 
-  // function submitPost(event) {
-  //   props.onAdd(post);
-  //   event.preventDefault();
-  // }
+  function submitPost(e) {
+    e.preventDefault();
+    Axios.post(`http://localhost:8000/backend/blogs`, {
+      image: "",
+      title: "",
+      time: "",
+      qoute: "",
+      description: "",
+    })
+      .then((res) => console.log("Posting Data", res))
+      .catch((err) => console.log(err));
+  }
 
   return (
     <>
@@ -47,13 +56,14 @@ function Compose() {
               alt="composeImg"
             />
           </div>
+          {/* <form className="composeForm" onSubmit={handleSubmit}> */}
           <form className="composeForm">
             <div className="composeFormGroup flexCenter">
               <label>Cover Photo</label>
               <input
                 name="image"
-                // value={post.image}
-                // onChange={handleChange}
+                value={image || ""}
+                onChange={(e) => setImage(e.target.value)}
                 className="composeBlog"
                 type="file"
                 autoFocus={true}
@@ -63,8 +73,8 @@ function Compose() {
               <label>Title</label>
               <input
                 name="title"
-                // value={post.title}
-                // onChange={handleChange}
+                value={title || ""}
+                onChange={(e) => setTitle(e.target.value)}
                 className="composeBlog"
                 type="text"
                 placeholder="Title"
@@ -75,8 +85,8 @@ function Compose() {
               <label>Time</label>
               <input
                 name="time"
-                //  value={post.time}
-                // onChange={handleChange}
+                value={time || ""}
+                onChange={(e) => setTime(e.target.value)}
                 className="composeBlog"
                 type="time"
                 placeholder="Time"
@@ -88,8 +98,8 @@ function Compose() {
               <label>Qoute</label>
               <input
                 name="qoute"
-                // value={post.qoute}
-                // onChange={handleChange}
+                value={qoute || ""}
+                onChange={(e) => setQoute(e.target.value)}
                 className="composeBlog"
                 type="text"
                 placeholder="Qoute"
@@ -101,8 +111,8 @@ function Compose() {
               <label>Description</label>
               <textarea
                 name="description"
-                //  value={post.description}
-                //   onChange={handleChange}
+                value={description || ""}
+                onChange={(e) => setDescription(e.target.value)}
                 className="composeBlog"
                 type="text"
                 placeholder="Write a blog..."
@@ -122,7 +132,7 @@ function Compose() {
             </div>
 
             <button
-              // onClick={submitPost}
+              onClick={submitPost}
               className="composeBlogBtn"
               type="submit"
               autoComplete="off"
