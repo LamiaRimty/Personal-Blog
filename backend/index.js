@@ -38,7 +38,7 @@ const blogs = [
   {
     id: 4,
     image:"https://www.discoverbenelux.com/wp-content/uploads/2015/09/SF_Gouda_003.jpg",
-    title: "abc",
+    title: "Where Does Gouda Cheese Come From?",
     time: "December 13,2023 .  🍱 10 min to read",
     qoute: "Gouda Cheese Market",
     description:
@@ -46,19 +46,21 @@ const blogs = [
   },
 ]
 
-// app.get("/",(req,res)=>{  //route handler function
-//   res.send("Hey There!!!!");
-// })
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+  });
 
 app.get("/backend/blogs",(req,res)=>{
   res.send(blogs);
 })
 
 app.get("/backend/blogs/:id",(req,res)=>{ 
-  const blog= blogs.find((b)=>b.id=== parseInt(req.params.id));
+ const blog= blogs.find((b)=>b.id=== parseInt(req.params.id));
 
   if(!blog){
-    res.status(404).send("Sorry this blog with given the id is not available!");
+   return res.status(404).send("Sorry this blog with given the id is not available!");  
   } 
   res.send(blog);
 })
@@ -67,12 +69,12 @@ app.get("/backend/blogs/:id",(req,res)=>{
 app.post("/backend/blogs",(req,res)=>{
   // const result =validateBlog(req.body);
   const {error} =validateBlog(req.body); // 3.validate
-
+  console.log("10");
   if(error){
-    res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
-    return;
+  return  res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
+  
   }
-
+  console.log("20");
   const blog ={
     id: blogs.length+1,
     image: req.body.image,
@@ -81,24 +83,25 @@ app.post("/backend/blogs",(req,res)=>{
     qoute:req.body.qoute,
     description:req.body.description
   };
+  console.log("30");
   blogs.push(blog);
   res.send(blog);
+  console.log("40");
 });
 
 //UPDATING BLOG POST
 app.put("/backend/blogs/:id",(req,res)=>{
  
   const blog = blogs.find( c => c.id ===parseInt(req.params.id)); //1.look up the blog
-  if(!blog){
-    res.status(404).send("Sorry this blog with given the id is not available!"); //2.if not exit ,return 404
+  if(!blog){ //if don't hav a blog with given id
+   return res.status(404).send("Sorry this blog with given the id is not available!"); //2.if not exit ,return 404
   }
-
 
   const {error} =validateBlog(req.body);
 
    if(error){
-    res.status(400).send(error.details[0].message);
-    return;
+    return res.status(400).send(error.details[0].message);
+  
    }
 
 // 5,update log
@@ -120,7 +123,7 @@ app.delete("/backend/blogs/:id",(req,res)=>{
 //Not Existing ,return 404
 const blog= blogs.find((b)=>b.id=== parseInt(req.params.id));
 if(!blog){
-  res.status(404).send("Sorry this blog with given the id is not available!");
+ return res.status(404).send("Sorry this blog with given the id is not available!");
 } 
 //Delete
 const index = blogs.indexOf(blog);
@@ -133,14 +136,14 @@ blogs.splice(index,1);
 
 function validateBlog(blog){
   const schema = Joi.object({
+   image:Joi.string().required(), 
    title: Joi.string()
      .min(3)
      .required(),
 
- // access_token: [
- //     Joi.string(),
- //     Joi.number()
- // ],
+     time: Joi.string().required(),
+     qoute:Joi.string().required(),
+     description:Joi.string().required()
 
 })
 
@@ -167,8 +170,18 @@ return schema.validate(blog);
 //     console.log(`can not connect to database, ${error}`);
 //   });
 
+
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
 //PORT
-const port = process.env.PORT || 3000;
+// app.set('port', (5000));
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Backend server listening on ${port}...`);
 })
