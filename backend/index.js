@@ -53,7 +53,7 @@ const blogs = [
     // title:"Chawkbazar: The 400-year-old bustling heart of Dhaka",
     // time:"⏱21 February 2019🧆🧃.5mins to read.",
     // qoute:"Chawkbazar is popular during Ramadan, the Muslim month of fasting, to break fast",
-    // description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast.Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish.They compete for space with the hundreds of electrical, telephone and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
+    // description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast. Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish. They compete for space with the hundreds of electrical, telephone, and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
   
   }
 ]
