@@ -2,6 +2,8 @@ const express = require('express')
 const Joi = require('joi');
 const app = express();
 app.use(express.json()); //json returns middleware
+const multer = require("multer")
+const path = require("path")
 
 const blogs = [
   {
@@ -44,6 +46,15 @@ const blogs = [
     description:
       "If you enjoy insights into culinary traditions and regional heritage it’s well worth taking a look at Gouda’s long-established weekly cheese market. Every Thursday during the summer months (subject to weather), locals don traditional costumes to convey how the Gouda cheese market was in bygone times. You’ll see a dozen or so people dressed as farmers, maids in lace bonnets and red aprons as well as cheese shop owners wearing white jackets and flat caps. Men recreate intense price negotiations between cheese producing farmers and buyers. It’s a dramatic and historically accurate scene.",
   },
+  {
+    // id:5,
+    // image:"https://c8.alamy.com/comp/W06HG1/chawk-bazar-iftar-market-of-dhaka-is-well-known-for-traditional-spicy-foods-thousands-of-people-gathered-on-a-road-in-front-of-shahi-mosque-where-sel-W06HG1.jpg",
+    // title:"Chawkbazar: The 400-year-old bustling heart of Dhaka",
+    // time:"⏱21 February 2019🧆🧃.5mins to read.",
+    // qoute:"Chawkbazar is popular during Ramadan, the Muslim month of fasting, to break fast",
+    // description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast.Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish.They compete for space with the hundreds of electrical, telephone and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
+  
+  }
 ]
 
 app.use(function(req, res, next) {
@@ -67,7 +78,7 @@ app.get("/backend/blogs/:id",(req,res)=>{
 
 
 app.post("/backend/blogs",(req,res)=>{
-  // const result =validateBlog(req.body);
+  const result =validateBlog(req.body);
   const {error} =validateBlog(req.body); // 3.validate
   console.log("10");
   if(error){
@@ -136,14 +147,12 @@ blogs.splice(index,1);
 
 function validateBlog(blog){
   const schema = Joi.object({
-   image:Joi.string().required(), 
-   title: Joi.string()
-     .min(3)
-     .required(),
-
-     time: Joi.string().required(),
-     qoute:Joi.string().required(),
-     description:Joi.string().required()
+   
+  image:Joi.string().required(), 
+  title:Joi.string().min(3).required(),
+  time:Joi.string().required(),
+  qoute:Joi.string().required(),
+  description:Joi.string().required()
 
 })
 
