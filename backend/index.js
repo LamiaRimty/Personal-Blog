@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json()); //json returns middleware
 const multer = require("multer")
 const path = require("path")
+app.use("/images", express.static(path.join(__dirname, "/images")))
 
 const blogs = [
   {
@@ -99,6 +100,19 @@ app.post("/backend/blogs",(req,res)=>{
   res.send(blog);
   console.log("40");
 });
+const storage = multer.diskStorage({
+  destination: (req, file, callb) => {
+    callb(null, "images")
+  },
+  filename: (req, file, callb) => {
+    //callb(null, "file.png")
+    callb(null, req.body.name)
+  },
+})
+const upload = multer({ storage: storage })
+app.post("/backend/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File has been uploaded")
+})
 
 //UPDATING BLOG POST
 app.put("/backend/blogs/:id",(req,res)=>{
