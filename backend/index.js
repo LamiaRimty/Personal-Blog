@@ -11,7 +11,7 @@ const blogs = [
     id: 1,
     image:"https://c.stocksy.com/a/2bL800/z9/1989644.jpg",
     title: "My journey to Web Development",
-    time: "December 1,2022 .  🥐 10 min to read",
+    time: "December 1,2022.🥐 10 min to read",
     qoute: "A personal reflection",
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
@@ -47,7 +47,7 @@ const blogs = [
     description:
       "If you enjoy insights into culinary traditions and regional heritage it’s well worth taking a look at Gouda’s long-established weekly cheese market. Every Thursday during the summer months (subject to weather), locals don traditional costumes to convey how the Gouda cheese market was in bygone times. You’ll see a dozen or so people dressed as farmers, maids in lace bonnets and red aprons as well as cheese shop owners wearing white jackets and flat caps. Men recreate intense price negotiations between cheese producing farmers and buyers. It’s a dramatic and historically accurate scene.",
   },
-  {
+  
     // id:5,
     // image:"https://c8.alamy.com/comp/W06HG1/chawk-bazar-iftar-market-of-dhaka-is-well-known-for-traditional-spicy-foods-thousands-of-people-gathered-on-a-road-in-front-of-shahi-mosque-where-sel-W06HG1.jpg",
     // title:"Chawkbazar: The 400-year-old bustling heart of Dhaka",
@@ -55,7 +55,7 @@ const blogs = [
     // qoute:"Chawkbazar is popular during Ramadan, the Muslim month of fasting, to break fast",
     // description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast. Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish. They compete for space with the hundreds of electrical, telephone, and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
   
-  }
+  
 ]
 
 app.use(function(req, res, next) {
@@ -78,41 +78,91 @@ app.get("/backend/blogs/:id",(req,res)=>{
 })
 
 
-app.post("/backend/blogs",(req,res)=>{
-  const result =validateBlog(req.body);
-  const {error} =validateBlog(req.body); // 3.validate
-  console.log("10");
-  if(error){
-  return  res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
+// app.post("/backend/blogs",(req,res)=>{
+//   const result =validateBlog(req.body);
+//   const {error} =validateBlog(req.body); // 3.validate
+//   console.log("10");
+//   if(error){
+//   return  res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
   
-  }
-  console.log("20");
-  const blog ={
-    id: blogs.length+1,
-    image: req.body.image,
-    title: req.body.title,
-    time: req.body.time,
-    qoute:req.body.qoute,
-    description:req.body.description
-  };
-  console.log("30");
-  blogs.push(blog);
-  res.send(blog);
-  console.log("40");
-});
+//   }
+//   console.log("20");
+//   const blog ={
+//     id: blogs.length+1,
+//     image: req.body.image,
+//     title: req.body.title,
+//     time: req.body.time,
+//     qoute:req.body.qoute,
+//     description:req.body.description
+//   };
+//   console.log("30");
+//   blogs.push(blog);
+//   res.send(blog);
+//   console.log("40");
+
+
+// });
+// console.log("50");
+
+
+//Upload images
 const storage = multer.diskStorage({
   destination: (req, file, callb) => {
     callb(null, "images")
   },
+  
   filename: (req, file, callb) => {
     //callb(null, "file.png")
     callb(null, req.body.name)
   },
+  
 })
-const upload = multer({ storage: storage })
-app.post("/backend/upload", upload.single("file"), (req, res) => {
-  res.status(200).json("File has been uploaded")
-})
+
+console.log("10");
+
+// const upload = multer({ storage: storage })
+
+// app.post("/backend/upload", upload.single("file"), (req, res) => {
+//   res.status(200).json("File has been uploaded")
+// })
+const upload = multer({ dest: 'blogs/' })
+console.log("a")
+app.post("/backend/blogs", upload.single("file"),(req,res)=>{
+  
+  console.log("b")
+
+  const result =validateBlog(req.body);
+  const {error} =validateBlog(req.body); // 3.validate
+  console.log("c");
+  if(error){
+  return  res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
+  
+  }
+  console.log("d");
+  const blog ={
+    id: blogs.length+1,
+    name:req.file.filename,
+    file: req.body.file,
+    title: req.body.title,
+    time: req.body.time,
+    qoute:req.body.qoute,
+    description:req.body.description
+    
+  };
+  console.log(file,title,time,qoute,description )
+  console.log("e");
+  blogs.push(blog);
+  res.send(blog);
+  console.log("f");
+
+
+});
+console.log("g");
+
+
+
+
+
 
 //UPDATING BLOG POST
 app.put("/backend/blogs/:id",(req,res)=>{
