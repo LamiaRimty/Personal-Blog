@@ -1,0 +1,14 @@
+.singleBlog .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .singleBlog .button {
+    margin-left: 20px;
+    border: none;
+  }
+  .singleBlog .button:nth-child(1) {
+    background: #10ac84;
+  }
+  .singleBlog .button:nth-child(2) {
+    background: #ee5253;
+  }

@@ -8,10 +8,11 @@ function Contact() {
     <section className="contact">
       <h2>Contact Me</h2>
       <h5>
-        Get In Touch.If you love reading as much I do.If you love reading as
-        much I do? Let's talk about coding & some books!.
+        If you love reading as much I do.If you love reading as much I do? Let's
+        talk about coding & some books!.
       </h5>
       <div className="container contact-container">
+        {/* <h3>Get In Touch</h3> */}
         <form className="form" action="">
           <label>
             <span>Your Email:</span>
@@ -52,6 +53,7 @@ function Contact() {
         </form>
 
         <div className="social-contact">
+          {/* <h3>Get Social</h3> */}
           <a
             href="https://www.linkedin.com/in/lamia-jabin-rimty-0020a2219/"
             target="_blank"
@@ -70,6 +72,9 @@ function Contact() {
           <a href="mailto:ljrimty@outlook.com" target="_blank">
             <AiOutlineMail />
           </a>
+        </div>
+        <div className="falcon falcon--right-side">
+          <div className="falcon__inner"></div>
         </div>
       </div>
     </section>

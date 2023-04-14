@@ -10,7 +10,7 @@ function Header() {
               <img
                 className="img"
                 src="https://media.licdn.com/dms/image/C4E03AQFjkJ8sh7Ywaw/profile-displayphoto-shrink_200_200/0/1660130720842?e=1681344000&v=beta&t=sPzIr8wqev46_zVWyDzPlOMcLSmxhcNEguzDrL3PAmk"
-                alt="rimty"
+                alt=""
               />
               Memoir
               <Link to="/"></Link>

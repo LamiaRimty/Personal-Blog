@@ -83,7 +83,23 @@ input,textarea{
     gap: 5px;
     margin-left:480px ;
   }
+  .falcon {
+    display: none;
+    visibility: hidden;
+    position: relative;
+    background-image: url("https://www.clipartmax.com/png/middle/55-556846_falcon-flying-clipart-flying-falcon-clipart.png");
+}
+@media (min-width: 61.875em){
+.falcon__inner {
+    content: '';
+    display: block;
+    width: 283px;
+    height: 570px;
+    background-size: 283px 570px;
+    background-image: url("https://www.clipartmax.com/png/middle/55-556846_falcon-flying-clipart-flying-falcon-clipart.png");
+}
 
+}
   @media screen  and (max-width: 1024px){ 
     .contact-container{
         grid-template-columns: 1fr;
