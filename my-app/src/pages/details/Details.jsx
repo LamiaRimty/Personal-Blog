@@ -20,6 +20,15 @@ function Details() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:8000/backend/blogs/${id}`, id);
+      window.location.replace(`http://localhost:3000`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <section id="details">
