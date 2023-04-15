@@ -51,7 +51,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Blog() {
-  const publicFolder = "localhost:/8000/images/";
+  const publicFolder = "http://localhost:8000/images/";
   const [blogs, setBlogs] = useState([]);
   const fetchBlogs = async () => {
     const responseBlog = await axios.get(`http://localhost:8000/backend/blogs`);
