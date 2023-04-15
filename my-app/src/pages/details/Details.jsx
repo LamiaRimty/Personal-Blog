@@ -8,7 +8,6 @@ import axios from "axios";
 function Details() {
   const { id } = useParams();
   const [blogPost, setBlogPost] = useState(null);
-  //const PublicFolder = "http://localhost:8000/images/";
 
   const fetchBlogDetails = async () => {
     const res = await axios.get(`http://localhost:8000/backend/blogs/${id}`);
@@ -28,10 +27,6 @@ function Details() {
             <div className="container">
               <h1>{blogPost.title}</h1>
               <div>
-                {/* {blogPost.image && (
-                  <img src={PublicFolder + blogPost.image} alt="" />
-                )} */}
-
                 <img src={blogPost.image} alt="" />
               </div>
               <p className="time">{blogPost.time}</p>
