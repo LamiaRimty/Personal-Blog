@@ -153,10 +153,11 @@ app.post("/backend/blogs",(req,res)=>{
   const {error} =validateBlog(req.body); // 3.validate
   console.log("50");
   if(error){
+    console.log(error)
   return  res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
   
   }
-
+  console.log("60");
   const blog ={
     id: blogs.length+1,
     image: req.body.image,
@@ -165,14 +166,13 @@ app.post("/backend/blogs",(req,res)=>{
     qoute:req.body.qoute,
     description:req.body.description
   };
- 
+  console.log("70");
   blogs.push(blog);
   res.send(blog);
-  
-
-
+  console.log("80");
 });
 
+console.log("90");
 
 
 
