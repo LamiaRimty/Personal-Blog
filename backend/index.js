@@ -76,89 +76,102 @@ app.get("/backend/blogs/:id",(req,res)=>{
   } 
   res.send(blog);
 })
+// //Upload images [From Documentation]
+// const storage = multer.diskStorage({
+//   destination: (req, file, callb) => {
+//     callb(null, "images")
+//   },
+  
+//   filename: (req, file, callb) => {
+//     //callb(null, "file.png")
+//     callb(null, req.body.name)
+//   },
+  
+// })
 
+// console.log("10");
 
-// app.post("/backend/blogs",(req,res)=>{
+// const upload = multer({ dest: "blogs/" })
+// console.log("a")
+// app.post("/backend/blogs", upload.single("image"),(req,res)=>{
+  
+//   console.log("b")
+
 //   const result =validateBlog(req.body);
 //   const {error} =validateBlog(req.body); // 3.validate
-//   console.log("10");
+//   console.log("c");
 //   if(error){
+//     console.log(error);
 //   return  res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
   
 //   }
-//   console.log("20");
+//   console.log("e");
 //   const blog ={
 //     id: blogs.length+1,
-//     image: req.body.image,
+//     name:req.file.filename,
+//     image: req.body.file,
 //     title: req.body.title,
 //     time: req.body.time,
 //     qoute:req.body.qoute,
 //     description:req.body.description
+ 
 //   };
-//   console.log("30");
+  
+//   console.log("f");
 //   blogs.push(blog);
 //   res.send(blog);
-//   console.log("40");
+//   console.log("g");
 
 
 // });
-// console.log("50");
+// console.log("h");
+//////////////////////\\\\\\\\\\\\\\\\\\\
 
-
-//Upload images
 const storage = multer.diskStorage({
-  destination: (req, file, callb) => {
-    callb(null, "images")
+  destination: (req, file, cb) => {
+    cb(null, "images");
+    console.log("10");
+  },
+  filename: (req, file, cb) => {
+    cb(null, req.body.name);
   },
   
-  filename: (req, file, callb) => {
-    //callb(null, "file.png")
-    callb(null, req.body.name)
-  },
-  
-})
+});
+console.log("20");
 
-console.log("10");
+const upload = multer({ storage: storage });
+console.log("30");
+app.post("/backend/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File has been uploaded");
+});
+console.log("40");
 
-// const upload = multer({ storage: storage })
 
-// app.post("/backend/upload", upload.single("file"), (req, res) => {
-//   res.status(200).json("File has been uploaded")
-// })
-const upload = multer({ dest: 'blogs/' })
-console.log("a")
-app.post("/backend/blogs", upload.single("file"),(req,res)=>{
-  
-  console.log("b")
 
+app.post("/backend/blogs",(req,res)=>{
   const result =validateBlog(req.body);
   const {error} =validateBlog(req.body); // 3.validate
-  console.log("c");
+  console.log("50");
   if(error){
   return  res.status(400).send(error.details[0].message);  // 4.if invalid,return 400 bad req
   
   }
-  console.log("d");
+
   const blog ={
     id: blogs.length+1,
-    name:req.file.filename,
-    file: req.body.file,
+    image: req.body.image,
     title: req.body.title,
     time: req.body.time,
     qoute:req.body.qoute,
     description:req.body.description
-    
   };
-  console.log(file,title,time,qoute,description )
-  console.log("e");
+ 
   blogs.push(blog);
   res.send(blog);
-  console.log("f");
+  
 
 
 });
-console.log("g");
-
 
 
 
