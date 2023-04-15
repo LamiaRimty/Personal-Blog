@@ -219,7 +219,7 @@ function Compose() {
       console.log("3");
 
       try {
-        await axios.post("http://localhost:8000/backend/upload", data);
+        await axios.post(`http://localhost:8000/backend/upload`, data);
       } catch (error) {
         console.log(error);
       }
@@ -229,16 +229,12 @@ function Compose() {
     try {
       //sent it to a single page
       const res = await axios.post(
-        // "http://localhost:8000/backend/blogs",
         `http://localhost:8000/backend/blogs`,
         newBlog
       );
 
       console.log("5");
-      window.location.replace(
-        // "http://localhost:8000/backend/details/" + res.data.id
-        `http://localhost:8000/backend/details/${res.data.id}`
-      );
+      window.location.replace(`http://localhost:3000/details/${res.data.id}`);
     } catch (err) {}
     console.log("6");
   };

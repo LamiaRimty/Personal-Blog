@@ -6,6 +6,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import axios from "axios";
 
 function Details() {
+  const publicFolder = "http://localhost:8000/images/";
   const { id } = useParams();
   const [blogPost, setBlogPost] = useState(null);
 
@@ -27,7 +28,16 @@ function Details() {
             <div className="container">
               <h1>{blogPost.title}</h1>
               <div>
-                <img src={blogPost.image} alt="" />
+                {/* home page image  old no,new yes  */}
+                {blogPost.image && (
+                  <img src={publicFolder + blogPost.image} alt="" />
+                )}
+
+                {/* home page image  old no,new yes  */}
+                {/* <img src={publicFolder + blogPost.image} alt="" /> */}
+
+                {/* home page image  old yes,new no  */}
+                {/* <img src={blogPost.image} alt="" /> */}
               </div>
               <p className="time">{blogPost.time}</p>
               <p className="desc">{blogPost.description}</p>
@@ -38,11 +48,9 @@ function Details() {
           <button className="button">
             <BsPencilSquare />
           </button>
-          <button className="button">
+          <button className="button" onClick={handleDelete}>
             <AiOutlineDelete />
           </button>
-
-          <button className="button">Update</button>
         </div>
       </section>
     </>

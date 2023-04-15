@@ -52,6 +52,7 @@ import axios from "axios";
 
 function Blog() {
   const publicFolder = "http://localhost:8000/images/";
+
   const [blogs, setBlogs] = useState([]);
   const fetchBlogs = async () => {
     const responseBlog = await axios.get(`http://localhost:8000/backend/blogs`);
@@ -69,7 +70,14 @@ function Blog() {
           {blogs.map((b) => (
             <article className="blogItems" key={b.id}>
               <div className="blog-img">
-                <img src={publicFolder + b.image} alt="img" />
+                {/* home page image  old no,new yes  */}
+                {b.image && <img src={publicFolder + b.image} alt="" />}
+
+                {/* home page image  old no,new yes  */}
+                {/* <img src={publicFolder + b.image} alt="" />  */}
+
+                {/* home page image  old yes,new no  */}
+                {/* <img src={b.image} alt="" /> */}
               </div>
               <Link to={`details/${b.id}`} className="link">
                 <h3 className="title">{b.title}</h3>
