@@ -9,6 +9,11 @@ function Details() {
   const publicFolder = "http://localhost:8000/images/";
   const { id } = useParams();
   const [blogPost, setBlogPost] = useState(null);
+  const [title, setTitle] = useState("");
+  const [time, setTime] = useState("");
+  const [qoute, setQoute] = useState("");
+  const [description, setDescription] = useState("");
+  const [updateMode, setUpdateMode] = useState(false);
 
   const fetchBlogDetails = async () => {
     const res = await axios.get(`http://localhost:8000/backend/blogs/${id}`);
@@ -34,7 +39,6 @@ function Details() {
         {blogPost ? (
           <article className="singleBlog">
             <div className="container">
-              <h1>{blogPost.title}</h1>
               <div>
                 {/* home page image  old no,new yes  */}
                 {blogPost.image && (
@@ -47,19 +51,34 @@ function Details() {
                 {/* home page image  old yes,new no  */}
                 {/* <img src={blogPost.image} alt="" /> */}
               </div>
+
+              {updateMode ? (
+                <input
+                  type="text"
+                  value={blogPost.title}
+                  className="blogTitleInput"
+                />
+              ) : (
+                <>
+                  <h1 className="blogTitle">{blogPost.title}</h1>
+                  <div className="buttons">
+                    <button
+                      className="button"
+                      onClick={() => setUpdateMode(true)}
+                    >
+                      <BsPencilSquare />
+                    </button>
+                    <button className="button" onClick={handleDelete}>
+                      <AiOutlineDelete />
+                    </button>
+                  </div>
+                </>
+              )}
               <p className="time">{blogPost.time}</p>
               <p className="desc">{blogPost.description}</p>
             </div>
           </article>
         ) : null}
-        <div className="buttons">
-          <button className="button">
-            <BsPencilSquare />
-          </button>
-          <button className="button" onClick={handleDelete}>
-            <AiOutlineDelete />
-          </button>
-        </div>
       </section>
     </>
   );
