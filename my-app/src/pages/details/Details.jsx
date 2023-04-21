@@ -28,7 +28,6 @@ function Details() {
       console.log(error);
     }
   };
-
   return (
     <>
       <section id="details">
