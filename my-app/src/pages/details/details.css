@@ -1,3 +1,13 @@
+.blogTitle{
+  text-align: center;
+  margin: 10px;
+  font-size: 28px;
+}
+.blogTitleInput{
+  text-align: center;
+  margin: 10px;
+  font-size: 28px;
+}
 .singleBlog .buttons {
     display: flex;
     justify-content: flex-end;

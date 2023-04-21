@@ -75,7 +75,12 @@ function Details() {
                 </>
               )}
               <p className="time">{blogPost.time}</p>
-              <p className="desc">{blogPost.description}</p>
+
+              {updateMode ? (
+                <textarea className="descInput" />
+              ) : (
+                <p className="desc">{blogPost.description}</p>
+              )}
             </div>
           </article>
         ) : null}
