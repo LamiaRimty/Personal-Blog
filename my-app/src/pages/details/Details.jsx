@@ -38,7 +38,7 @@ function Details() {
       <section id="details">
         {blogPost ? (
           <article className="singleBlog">
-            <div className="container">
+            <div className="container container-blog-wrap">
               <div>
                 {/* home page image  old no,new yes  */}
                 {blogPost.image && (
@@ -77,9 +77,9 @@ function Details() {
               <p className="time">{blogPost.time}</p>
 
               {updateMode ? (
-                <textarea className="descInput" />
+                <textarea className="blogDescInput" />
               ) : (
-                <p className="desc">{blogPost.description}</p>
+                <p className="blogDesc">{blogPost.description}</p>
               )}
             </div>
           </article>
