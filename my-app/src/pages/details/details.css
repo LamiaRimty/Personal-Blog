@@ -61,3 +61,16 @@
   .singleBlog .button:nth-child(2) {
     background: #ee5253;
   }
+
+  .blogEditButton{
+    color:white;
+    background-color: #10ac84;
+    width: 100px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+   /*  right side e chole jay */
+   margin-top: 20px;
+  }

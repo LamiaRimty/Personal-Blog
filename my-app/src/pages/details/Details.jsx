@@ -51,7 +51,6 @@ function Details() {
                 {/* home page image  old yes,new no  */}
                 {/* <img src={blogPost.image} alt="" /> */}
               </div>
-
               {updateMode ? (
                 <input
                   type="text"
@@ -79,7 +78,6 @@ function Details() {
                 </>
               )}
               <p className="time">{blogPost.time}</p>
-
               {updateMode ? (
                 <textarea
                   className="blogDescInput"
@@ -89,6 +87,7 @@ function Details() {
               ) : (
                 <p className="blogDesc">{description}</p>
               )}
+              <button className="blogEditButton">Update</button>
             </div>
           </article>
         ) : null}
