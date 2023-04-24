@@ -10,8 +10,6 @@ function Details() {
   const { id } = useParams();
   const [blogPost, setBlogPost] = useState(null);
   const [title, setTitle] = useState("");
-  const [time, setTime] = useState("");
-  const [qoute, setQoute] = useState("");
   const [description, setDescription] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
@@ -19,6 +17,8 @@ function Details() {
     const res = await axios.get(`http://localhost:8000/backend/blogs/${id}`);
     //console.log(res);
     setBlogPost(res.data);
+    setTitle(res.data.title);
+    setDescription(res.data.description);
   };
   useEffect(() => {
     fetchBlogDetails();
@@ -55,31 +55,39 @@ function Details() {
               {updateMode ? (
                 <input
                   type="text"
-                  value={blogPost.title}
+                  value={title}
                   className="blogTitleInput"
+                  onChange={(e) => setTitle(e.target.value)}
                 />
               ) : (
                 <>
-                  <h1 className="blogTitle">{blogPost.title}</h1>
-                  <div className="buttons">
-                    <button
-                      className="button"
-                      onClick={() => setUpdateMode(true)}
-                    >
-                      <BsPencilSquare />
-                    </button>
-                    <button className="button" onClick={handleDelete}>
-                      <AiOutlineDelete />
-                    </button>
-                  </div>
+                  <h1 className="blogTitle">
+                    {title}
+                    <div className="buttons blogEdit">
+                      <button
+                        className="button"
+                        onClick={() => setUpdateMode(true)}
+                      >
+                        <BsPencilSquare />
+                      </button>
+
+                      <button className="button" onClick={handleDelete}>
+                        <AiOutlineDelete />
+                      </button>
+                    </div>
+                  </h1>
                 </>
               )}
               <p className="time">{blogPost.time}</p>
 
               {updateMode ? (
-                <textarea className="blogDescInput" />
+                <textarea
+                  className="blogDescInput"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                />
               ) : (
-                <p className="blogDesc">{blogPost.description}</p>
+                <p className="blogDesc">{description}</p>
               )}
             </div>
           </article>

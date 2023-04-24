@@ -43,6 +43,10 @@
   
 
 }
+
+.blogDescInput:focus{
+  outline:none;
+}
 .singleBlog .buttons {
     display: flex;
     justify-content: flex-end;
