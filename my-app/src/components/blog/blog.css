@@ -17,18 +17,17 @@ h5{
 }
 
 .blogItems{
-   background: midnightblue;
+   background: #87CBB9;
    padding: 20px;
    border-radius:10px;
-   border: 1px solid skyblue; 
+   border: 1px solid #B9EDDD; 
    transition: var(-transition);
    margin: 10px;
 }
 
 .blogItems:hover{
-    border:1px solid skyblue;
+    border:1px solid  #87CBB9;
     background: transparent;
-    
 }
 
 .blog-img{
@@ -41,8 +40,9 @@ h5{
 .title{
     margin: 20px 0 10px;
     font-size: 20px;
-    /*font-weight: medium;*/
-    color: #FF6E31; 
+    /* color: #0A4D68;  */
+    font-weight: 900;
+    color: #2C3333;
     cursor: pointer;
     text-decoration: none;
     text-align: left;
@@ -62,9 +62,12 @@ h5{
 
 .qoute{
     font-size: 14px;
-    color: bisque;
+    color: #F6FFDE;
     font-weight:medium; 
     text-align: left;
+}
+.qoute:hover{
+    color:#2C3333;
 }
 
 .link{
@@ -84,9 +87,8 @@ h1{
   
   .time{
     font-size: 12px;
-    color: beige;
-    font-weight: lighter;
-  }
+    color: #2C3333;
+    font-weight:300}
 
   @media screen  and(max-width: 1024px){
     .blog-container{

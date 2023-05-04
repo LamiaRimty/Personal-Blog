@@ -15,15 +15,16 @@
   }
   body {
     height: 100%;
-    color: #FF6E31;
+    color:#263A29;
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.7;
-    background: #041938;
-background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
-  }
+    background:#F6FFDE;
+    /* background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png"); */
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");  
+}
 
   #root {
     --container-width-lg:75%;
@@ -49,7 +50,8 @@ h1{
   font-size: 40px;
 }
 h4{
-  color: bisque;
+  /* color: bisque; */
+  color:#E86A33;
   font-size: 16px;
 }
 
@@ -62,9 +64,14 @@ section{
   margin-top: 5px;
 }
 
-section >h2,section >h5 {
+section >h2{
   text-align: center;
-  color: antiquewhite;
+  color: #FF6E31;
+}
+
+section >h5 {
+  text-align: center;
+  color: #263A29;
 }
 
 section >h2{
@@ -79,19 +86,23 @@ text-light{
 
 
 a{
-  color: skyblue;
+  color: #205E61;
   transition: var(--transition);
  
 }
-
-a:hover{
-  color: azure;
+li{
+  color:#205E61;
 }
+
+/* a:hover{
+  color: azure;
+} */
 
 img{
   display: block;
   width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .btn-info {

@@ -7,7 +7,7 @@
 
 .container-skills > div{
 margin-top: 60px;
-background: #146C94;
+background:#87CBB9;
 padding: 40px 80px;
 border-radius: 30px;
 border: 1x solid transparent;
@@ -16,7 +16,7 @@ transition: var(--transition);
 
 .container-skills > div:hover{
     background: transparent;
-    border-color:orangered;
+    border-color:#FF6E31;
     cursor: default;
 }
 

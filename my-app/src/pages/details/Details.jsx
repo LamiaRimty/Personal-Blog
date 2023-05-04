@@ -33,6 +33,26 @@ function Details() {
       console.log(error);
     }
   };
+
+  const handleUpdate = async () => {
+    console.log(1);
+    try {
+      await axios.put(`http://localhost:8000/backend/blogs/${id}`, id, {
+        title,
+        description,
+      });
+      console.log(2);
+      //window.location.reload(`http://localhost:3000/details/${id}`, id);
+      setUpdateMode(false);
+      console.log(3);
+    } catch (error) {
+      console.log(4);
+      console.log(error);
+      console.log(5);
+    }
+    console.log(6);
+  };
+
   return (
     <>
       <section id="details">
@@ -87,7 +107,12 @@ function Details() {
               ) : (
                 <p className="blogDesc">{description}</p>
               )}
-              <button className="blogEditButton">Update</button>
+
+              {updateMode && (
+                <button className="blogEditButton" onClick={handleUpdate}>
+                  Update
+                </button>
+              )}
             </div>
           </article>
         ) : null}

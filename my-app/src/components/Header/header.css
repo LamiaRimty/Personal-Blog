@@ -1,6 +1,4 @@
 body {
-    background-color: #041938;
-    color: #FF6E31;
     font-family: 'Josefin Sans', sans-serif;
     
   }
@@ -12,7 +10,7 @@ body {
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
     /* box-shadow: 0px 0.5px  #FF6E31; */
@@ -37,10 +35,21 @@ body {
   color: #FF6E31;
   cursor: pointer;
   display: flex;
-  gap:16px
+  gap:16px;
  
 }
-
+#brand{
+  color: #FF6E31;
+  outline: none;
+}
+#brand:hover{
+  color: #205E61;
+}
+.nav-link
+{
+  color: #205E61;
+  font-weight: 500;
+}
 .container-header{
   display: flex;
 }

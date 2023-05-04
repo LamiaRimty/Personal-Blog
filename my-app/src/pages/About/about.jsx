@@ -9,7 +9,8 @@ function About() {
           <div className="about-img">
             <img
               className="about-img"
-              src="https://scontent-ams4-1.xx.fbcdn.net/v/t39.30808-6/314409068_3457665244515886_1745854450779409135_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=vcHA1NEHWPMAX-gNWqT&_nc_ht=scontent-ams4-1.xx&oh=00_AfD_NEKTXBYvT_riJfmESQWglOwdKr9f38TwmA1eM-4n1g&oe=641E3EC0"
+              // src="https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX56391809.jpg"
+              src="https://static.vecteezy.com/system/resources/thumbnails/007/525/724/small_2x/young-woman-in-hat-and-summer-dress-rides-bicycle-with-basket-of-flowers-bike-ride-against-sky-on-village-street-concept-of-summer-holidays-healthy-lifestyle-vector.jpg"
               alt="rimty"
             />
           </div>

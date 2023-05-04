@@ -27,7 +27,7 @@ color: orangered;
     aspect-ratio: 1/1;
     border-radius: 2rem;
      /* background: linear-gradient(40deg,transparent,var(--color--primary),transparent); */
-     background:rgb(32, 95, 120);
+     background:#205E61;
     display: grid;
     place-items: center;
     
@@ -45,6 +45,7 @@ color: orangered;
     /* overflow: hidden; */
     transform: rotate(5deg);
     transition: var(--transition);
+   
    }
    
    .about-img:hover{
@@ -52,17 +53,17 @@ color: orangered;
    } 
 
    .btn-info {
-    background: mediumseagreen;
-    background-image: -webkit-linear-gradient(top, mediumseagreen, #1abc9c );
-    background-image: -moz-linear-gradient(top, mediumseagreen, #1abc9c );
-    background-image: -ms-linear-gradient(top, mediumseagreen, #1abc9c );
-    background-image: -o-linear-gradient(top, mediumseagreen, #1abc9c );
-    background-image: linear-gradient(to bottom, mediumseagreen, #1abc9c );
+    background:#87CBB9; 
+    background-image: -webkit-linear-gradient(top, teal, #1abc9c );
+    background-image: -moz-linear-gradient(top, teal, #1abc9c );
+    background-image: -ms-linear-gradient(top, teal, #1abc9c );
+    background-image: -o-linear-gradient(top, teal, #1abc9c );
+    background-image: linear-gradient(to bottom, teal, #1abc9c );
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 10px;
     font-family: Arial;
-    color: #ffffff;
+    color: orangered;
     font-size: 12px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
@@ -70,7 +71,7 @@ color: orangered;
   }
   
   .btn-info:hover {
-    background: darkseagreen;
+    background: #577D86;
     background-image: -webkit-linear-gradient(top, darkseagreen, seagreen);
     background-image: -moz-linear-gradient(top, darkseagreen, seagreen);
     background-image: -ms-linear-gradient(top, darkseagreen, seagreen);

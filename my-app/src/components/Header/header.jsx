@@ -9,11 +9,12 @@ function Header() {
             <p className="navbar-brand">
               <img
                 className="img"
-                src="https://media.licdn.com/dms/image/C4E03AQFjkJ8sh7Ywaw/profile-displayphoto-shrink_200_200/0/1660130720842?e=1681344000&v=beta&t=sPzIr8wqev46_zVWyDzPlOMcLSmxhcNEguzDrL3PAmk"
+                src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/purple-tulip-martin-morehead.jpg"
                 alt=""
               />
-              Memoir
-              <Link to="/"></Link>
+              <Link to="/" id="brand" className="nav-link">
+                Memoir
+              </Link>
             </p>
           </div>
 
