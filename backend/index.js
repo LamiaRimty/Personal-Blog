@@ -90,8 +90,8 @@ Blog.find().then(function (blogs) {
 //   console.log(err);
 // });
 
-Blog.deleteOne({ _id: "645e7190e99f6618c93062a6" }).then(function(blogs){
-  console.log("Deleted one succesfully");
+Blog.deleteMany({ title: 'Chawkbazar: The 400-year-old bustling heart of Dhaka' }).then(function(blogs){
+  console.log("Deleted all blogs successfully");
 }).catch(function (err) {
   console.log(err);
 });
