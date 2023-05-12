@@ -37,7 +37,7 @@ function Details() {
   const handleUpdate = async () => {
     console.log(1);
     try {
-      await axios.put(`http://localhost:8000/backend/blogs/${id}`, id, {
+      await axios.put(`http://localhost:8000/backend/blogs/${id}`, {
         title,
         description,
       });
