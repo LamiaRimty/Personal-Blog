@@ -84,13 +84,17 @@ Blog.find().then(function (blogs) {
   console.log(err);
 });
 
-Blog.updateOne({ _id: "6453b7e40c53a1d7d4b3320b" },{ title: "Chawkbazar: The 400-year-old bustling heart of Dhaka" }).then(function(blogs){
-  console.log("updated succesfully");
+// Blog.updateOne({ _id: "6453b7e40c53a1d7d4b3320b" },{ title: "Chawkbazar: The 400-year-old bustling heart of Dhaka" }).then(function(blogs){
+//   console.log("updated succesfully");
+// }).catch(function (err) {
+//   console.log(err);
+// });
+
+Blog.deleteOne({ _id: "645e7190e99f6618c93062a6" }).then(function(blogs){
+  console.log("Deleted one succesfully");
 }).catch(function (err) {
   console.log(err);
 });
-
-// Blog.deleteOne({ title:"Chawkbazar: The 400-year-old bustling heart of Dhaka"},function(error){
 
 
 
