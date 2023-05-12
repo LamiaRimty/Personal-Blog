@@ -74,26 +74,8 @@ const blog3= new Blog({
 // )
 
 
-// Blog.find(function(error,blogs).then(error){
-//     console.log(error);
-//   .catch{
-//     console.log(blogs);
-//     blogs.forEach(function(blogs){
-//       console.log(blog.title);
-//     })
-//   }
-// });
-  // then(function (blogs) {
-  // console.log(blogs);
-  // mongoose.connection.close();
-  // blogs.forEach.then(function(blog){
-  // console.log(blog.title)
-  // })
-  // })
-// .catch(function (err) {
-//   console.log(err);
-// });
 Blog.find().then(function (blogs) {
+  mongoose.connection.close();
    blogs.forEach(function(blog){
     console.log(blog.title);
    })
@@ -102,11 +84,11 @@ Blog.find().then(function (blogs) {
   console.log(err);
 });
 
-// Blog.updateOne({ _id:"6453b7e40c53a1d7d4b3320b" },{ title: "Iftar in Dhaka" }).then(function(blogs){
-//   console.log("updated succesfully");
-// }).catch(function (err) {
-//   console.log(err);
-// });
+Blog.updateOne({ _id: "6453b7e40c53a1d7d4b3320b" },{ title: "Chawkbazar: The 400-year-old bustling heart of Dhaka" }).then(function(blogs){
+  console.log("updated succesfully");
+}).catch(function (err) {
+  console.log(err);
+});
 
 // Blog.deleteOne({ title:"Chawkbazar: The 400-year-old bustling heart of Dhaka"},function(error){
 
