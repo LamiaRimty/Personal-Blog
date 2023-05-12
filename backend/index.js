@@ -16,6 +16,7 @@ const blogSchema = new mongoose.Schema({
   description:String
 });
 
+//schema model
 const Blog =mongoose.model("Blog",blogSchema);
 
 const blog= new Blog({
@@ -71,6 +72,46 @@ const blog3= new Blog({
 //   // }}
  
 // )
+
+
+// Blog.find().then(function (blogs) {
+//   console.log(blogs);
+//   mongoose.connection.close();
+//   blogs.forEach.then(function(blog){
+//   console.log(blog.title)
+//   })
+//   })
+// .catch(function (err) {
+//   console.log(err);
+// });
+Blog.find()
+.then(function (blogs) {
+  console.log(blog.title);
+  console.log(blog1.title);
+  console.log(blog2.title);
+  console.log(blog3.title);
+  // blogs.forEach().then(function(blog){
+  //   console.log(blog.title)
+  // })
+})
+.catch(function (err) {
+  console.log(err);
+});
+
+// Blog.updateOne({ _id:"6453b7e40c53a1d7d4b3320b" },{ title: "Iftar in Dhaka" }).then(function(blogs){
+//   console.log("updated succesfully");
+// }).catch(function (err) {
+//   console.log(err);
+// });
+
+// Blog.deleteOne({ title:"Chawkbazar: The 400-year-old bustling heart of Dhaka"},function(error){
+Blog.updateOne({ title:"Chawkbazar: The 400-year-old bustling heart of Dhaka"}).then(function(blogs){
+  console.log("deleted succesfully");
+}).catch(function (err) {
+  console.log(err);
+});
+
+
 
 const blogs = [
   {
@@ -200,7 +241,9 @@ app.put("/backend/blogs/:id",(req,res)=>{
    return res.status(404).send("Sorry this blog with given the id is not available!"); //2.if not exit ,return 404
   }
   console.log(40);
-  const {error} =validateBlog(req.body);
+  console.log(req.body);
+  const {error} =validateBlogPut(req.body);
+
   console.log(50);
    if(error){
     console.log(error)
@@ -221,19 +264,19 @@ res.send(blog);
 console.log(80);
 })
 ///valid for put
-// function validateBlogPut(blog){
-//   const schema = Joi.object({
+function validateBlogPut(blog){
+  const schema = Joi.object({
     
-  
-//   title:Joi.string().min(3).required(),
+  image:Joi.string(),
+  title:Joi.string().min(3).required(),
 
-//   description:Joi.string().required()
+  description:Joi.string().required()
   
-// })
-// console.log(90);
-// return schema.validate(blog);
+})
+console.log(90);
+return schema.validate(blog);
 
-// }
+}
 
 console.log(100);
  
@@ -271,7 +314,7 @@ return schema.validate(blog);
 
 
 const cors=require("cors");
-const { error } = require('console');
+const { error, Console } = require('console');
 const corsOptions ={
    origin:'*', 
    credentials:true,            //access-control-allow-credentials:true
