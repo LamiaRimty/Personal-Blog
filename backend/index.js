@@ -74,25 +74,29 @@ const blog3= new Blog({
 // )
 
 
-// Blog.find().then(function (blogs) {
-//   console.log(blogs);
-//   mongoose.connection.close();
-//   blogs.forEach.then(function(blog){
-//   console.log(blog.title)
-//   })
-//   })
+// Blog.find(function(error,blogs).then(error){
+//     console.log(error);
+//   .catch{
+//     console.log(blogs);
+//     blogs.forEach(function(blogs){
+//       console.log(blog.title);
+//     })
+//   }
+// });
+  // then(function (blogs) {
+  // console.log(blogs);
+  // mongoose.connection.close();
+  // blogs.forEach.then(function(blog){
+  // console.log(blog.title)
+  // })
+  // })
 // .catch(function (err) {
 //   console.log(err);
 // });
-Blog.find()
-.then(function (blogs) {
-  console.log(blog.title);
-  console.log(blog1.title);
-  console.log(blog2.title);
-  console.log(blog3.title);
-  // blogs.forEach().then(function(blog){
-  //   console.log(blog.title)
-  // })
+Blog.find().then(function (blogs) {
+   blogs.forEach(function(blog){
+    console.log(blog.title);
+   })
 })
 .catch(function (err) {
   console.log(err);
@@ -105,11 +109,6 @@ Blog.find()
 // });
 
 // Blog.deleteOne({ title:"Chawkbazar: The 400-year-old bustling heart of Dhaka"},function(error){
-Blog.updateOne({ title:"Chawkbazar: The 400-year-old bustling heart of Dhaka"}).then(function(blogs){
-  console.log("deleted succesfully");
-}).catch(function (err) {
-  console.log(err);
-});
 
 
 
@@ -269,7 +268,8 @@ function validateBlogPut(blog){
     
   image:Joi.string(),
   title:Joi.string().min(3).required(),
-
+  time:Joi.string(),
+  qoute:Joi.string(),
   description:Joi.string().required()
   
 })
