@@ -19,48 +19,48 @@ const blogSchema = new mongoose.Schema({
 //schema model
 const Blog =mongoose.model("Blog",blogSchema);
 
-const blog= new Blog({
-   image:"https://c8.alamy.com/comp/W06HG1/chawk-bazar-iftar-market-of-dhaka-is-well-known-for-traditional-spicy-foods-thousands-of-people-gathered-on-a-road-in-front-of-shahi-mosque-where-sel-W06HG1.jpg",
-    title:"Chawkbazar: The 400-year-old bustling heart of Dhaka",
-    time:"⏱21 February 2019🧆🧃.5mins to read.",
-    qoute:"Chawkbazar is popular during Ramadan, the Muslim month of fasting, to break fast",
-    description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast. Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish. They compete for space with the hundreds of electrical, telephone, and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
+// const blog= new Blog({
+//    image:"https://c8.alamy.com/comp/W06HG1/chawk-bazar-iftar-market-of-dhaka-is-well-known-for-traditional-spicy-foods-thousands-of-people-gathered-on-a-road-in-front-of-shahi-mosque-where-sel-W06HG1.jpg",
+//     title:"Chawkbazar: The 400-year-old bustling heart of Dhaka",
+//     time:"⏱21 February 2019🧆🧃.5mins to read.",
+//     qoute:"Chawkbazar is popular during Ramadan, the Muslim month of fasting, to break fast",
+//     description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast. Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish. They compete for space with the hundreds of electrical, telephone, and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
   
-})
+// })
 
 
 
 //blog.save();
 //save blogs
-const blog1= new Blog({
-  image:"https://c.stocksy.com/a/2bL800/z9/1989644.jpg",
-  title: "My journey to Web Development",
-  time: "December 1,2022.🥐 10 min to read",
-  qoute: "A personal reflection",
-  description:
-    "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+// const blog1= new Blog({
+//   image:"https://c.stocksy.com/a/2bL800/z9/1989644.jpg",
+//   title: "My journey to Web Development",
+//   time: "December 1,2022.🥐 10 min to read",
+//   qoute: "A personal reflection",
+//   description:
+//     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
 
-});
+// });
 
-const blog2= new Blog({
-  image:"https://eatwelltraveloften.online/wp-content/uploads/2016/08/IMG_0083-1080x720.jpg",
-    title: "Difference between == and === in javascript",
-    time: "December 1,2022 .  ☕️ 10 min to read",
-    qoute: "Which one to use?",
-    description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+// const blog2= new Blog({
+//   image:"https://eatwelltraveloften.online/wp-content/uploads/2016/08/IMG_0083-1080x720.jpg",
+//     title: "Difference between == and === in javascript",
+//     time: "December 1,2022 .  ☕️ 10 min to read",
+//     qoute: "Which one to use?",
+//     description:
+//       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
  
-});
+// });
 
-const blog3= new Blog({
-  image:"https://media.istockphoto.com/id/516019979/photo/amsterdam-summer-sunrise.jpg?s=612x612&w=0&k=20&c=YnYn52rR0J_YINkjK8JPMTfnrqRn1E2AzlLayNOgnC4=",
-    title: "Ways of Creating objects JavaScript",
-    time: "December 1,2022 .  🍱 10 min to read",
-    qoute: "Three ways to set you on right path.?",
-    description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+// const blog3= new Blog({
+//   image:"https://media.istockphoto.com/id/516019979/photo/amsterdam-summer-sunrise.jpg?s=612x612&w=0&k=20&c=YnYn52rR0J_YINkjK8JPMTfnrqRn1E2AzlLayNOgnC4=",
+//     title: "Ways of Creating objects JavaScript",
+//     time: "December 1,2022 .  🍱 10 min to read",
+//     qoute: "Three ways to set you on right path.?",
+//     description:
+//       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
   
-});
+// });
 
 // Blog.insertMany([blog1,blog2,blog3]
 //   // ,function(error){
@@ -75,7 +75,7 @@ const blog3= new Blog({
 
 
 Blog.find().then(function (blogs) {
-  mongoose.connection.close();
+  //mongoose.connection.close();
    blogs.forEach(function(blog){
     console.log(blog.title);
    })
@@ -202,17 +202,20 @@ app.post("/backend/blogs",(req,res)=>{
   
   }
   
-  const blog ={
-    id: blogs.length+1,
-    image: req.body.image,
-    title: req.body.title,
-    time: req.body.time,
-    qoute:req.body.qoute,
-    description:req.body.description
-  };
+  const blog =  new Blog(
+    {
+      id: blogs.length+1,
+      image: req.body.image,
+      title: req.body.title,
+      time: req.body.time,
+      qoute:req.body.qoute,
+      description:req.body.description
+    }
+  );
 
-  blogs.push(blog);
-  res.send(blog);
+  // blogs.push(blog);
+  // res.send(blog);
+
 
 });
 
