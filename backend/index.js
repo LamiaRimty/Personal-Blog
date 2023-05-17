@@ -215,7 +215,11 @@ app.post("/backend/blogs",(req,res)=>{
 
   // blogs.push(blog);
   // res.send(blog);
-
+  blog.save(function(err){
+    if(!err){
+      console.log("Blog saved Successfully");
+    }
+  })
 
 });
 
