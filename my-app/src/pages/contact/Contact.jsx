@@ -74,7 +74,10 @@ function Contact() {
           </a>
         </div>
         <div className="falcon falcon--right-side">
-          <div className="falcon__inner"></div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7M89k7N4TAsCqVyzXYDUkBBh4_ISBYrCJjA&usqp=CAU"
+            className="falcon__inner"
+          ></img>
         </div>
       </div>
     </section>

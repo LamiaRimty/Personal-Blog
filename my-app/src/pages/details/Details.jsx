@@ -42,7 +42,6 @@ function Details() {
         description,
       });
       console.log(2);
-      //window.location.reload(`http://localhost:3000/details/${id}`, id);
       setUpdateMode(false);
       console.log(3);
     } catch (error) {

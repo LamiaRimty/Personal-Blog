@@ -18,15 +18,25 @@ function About() {
 
         <div>
           <p className="info">
-            I'm Lamia Jabin Rimty.I'm originally from Bangladesh,but I've been
-            living here in the Netherlands since March 2022.I've completed
-            gradutation from Computer Science & Engineering of The University of
-            Rajshahi.Over the time,I have gained a growing of experience
-            designing and developing web applications.I've always been
-            interested in Web development and have some basic skills in HTML,
-            CSS, JavaScript, Jquery, and SQL. I am currently improving my mobile
-            app development skills by learning various new technologies.I like
-            reading books and traveling and have a passion for painting.
+            I'm Lamia Jabin Rimty.Beautiful Bangladesh is a small country in
+            South Asia & that’s where I am from.
+            <br></br>
+            <br></br>I went to a decent school called Rangpur Govt Girls
+            School,then joined a college called Rangopur college & then I did my
+            gradutation from the deparment of Computer Science & Engineering of
+            The University of Rajshahi.
+            <br></br>
+            <br></br>I now live in the Netherlands.I initially came here in
+            2022.
+            <br></br>
+            <br></br>
+            Over the time,I have gained a growing of experience designing and
+            developing web applications.I've always been interested in Web
+            development and have some basic skills in HTML, CSS, JavaScript,
+            Jquery, and SQL. I am currently improving my mobile app development
+            skills by learning various new technologies.I like reading books and
+            traveling and have a passion for painting.
+            {/* There’s a saying – How come you don’t know you are in the good old days, when you are in the good old days.I am getting old, nostalgic and I think about that every day now.  */}
           </p>
           <a href="#contact" className="btn btn-info">
             Let's talk
