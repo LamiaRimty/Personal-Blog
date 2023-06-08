@@ -98,58 +98,58 @@ Blog.deleteMany({ title: 'Chawkbazar: The 400-year-old bustling heart of Dhaka' 
 
 
 
-const blogs = [
-  {
-    id: 1,
-    image:"https://c.stocksy.com/a/2bL800/z9/1989644.jpg",
-    title: "My journey to Web Development",
-    time: "December 1,2022.🥐 10 min to read",
-    qoute: "A personal reflection",
-    description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+// const blogs = [
+//   {
+//     id: 1,
+//     image:"https://c.stocksy.com/a/2bL800/z9/1989644.jpg",
+//     title: "My journey to Web Development",
+//     time: "December 1,2022.🥐 10 min to read",
+//     qoute: "A personal reflection",
+//     description:
+//       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
   
-    },
+//     },
 
-  {
-    id: 2,
-    image:"https://eatwelltraveloften.online/wp-content/uploads/2016/08/IMG_0083-1080x720.jpg",
-    title: "Difference between == and === in javascript",
-    time: "December 1,2022 .  ☕️ 10 min to read",
-    qoute: "Which one to use?",
-    description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-  },
+//   {
+//     id: 2,
+//     image:"https://eatwelltraveloften.online/wp-content/uploads/2016/08/IMG_0083-1080x720.jpg",
+//     title: "Difference between == and === in javascript",
+//     time: "December 1,2022 .  ☕️ 10 min to read",
+//     qoute: "Which one to use?",
+//     description:
+//       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+//   },
 
-  {
-    id: 3,
-    image:"https://media.istockphoto.com/id/516019979/photo/amsterdam-summer-sunrise.jpg?s=612x612&w=0&k=20&c=YnYn52rR0J_YINkjK8JPMTfnrqRn1E2AzlLayNOgnC4=",
-    title: "Ways of Creating objects JavaScript",
-    time: "December 1,2022 .  🍱 10 min to read",
-    qoute: "Three ways to set you on right path.?",
-    description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-  },
+//   {
+//     id: 3,
+//     image:"https://media.istockphoto.com/id/516019979/photo/amsterdam-summer-sunrise.jpg?s=612x612&w=0&k=20&c=YnYn52rR0J_YINkjK8JPMTfnrqRn1E2AzlLayNOgnC4=",
+//     title: "Ways of Creating objects JavaScript",
+//     time: "December 1,2022 .  🍱 10 min to read",
+//     qoute: "Three ways to set you on right path.?",
+//     description:
+//       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+//   },
 
 
-  {
-    id: 4,
-    image:"https://www.discoverbenelux.com/wp-content/uploads/2015/09/SF_Gouda_003.jpg",
-    title: "Where Does Gouda Cheese Come From?",
-    time: "December 13,2023 .  🍱 10 min to read",
-    qoute: "Gouda Cheese Market",
-    description:
-      "If you enjoy insights into culinary traditions and regional heritage it’s well worth taking a look at Gouda’s long-established weekly cheese market. Every Thursday during the summer months (subject to weather), locals don traditional costumes to convey how the Gouda cheese market was in bygone times. You’ll see a dozen or so people dressed as farmers, maids in lace bonnets and red aprons as well as cheese shop owners wearing white jackets and flat caps. Men recreate intense price negotiations between cheese producing farmers and buyers. It’s a dramatic and historically accurate scene.",
-  },
+//   {
+//     id: 4,
+//     image:"https://www.discoverbenelux.com/wp-content/uploads/2015/09/SF_Gouda_003.jpg",
+//     title: "Where Does Gouda Cheese Come From?",
+//     time: "December 13,2023 .  🍱 10 min to read",
+//     qoute: "Gouda Cheese Market",
+//     description:
+//       "If you enjoy insights into culinary traditions and regional heritage it’s well worth taking a look at Gouda’s long-established weekly cheese market. Every Thursday during the summer months (subject to weather), locals don traditional costumes to convey how the Gouda cheese market was in bygone times. You’ll see a dozen or so people dressed as farmers, maids in lace bonnets and red aprons as well as cheese shop owners wearing white jackets and flat caps. Men recreate intense price negotiations between cheese producing farmers and buyers. It’s a dramatic and historically accurate scene.",
+//   },
   
-    // id:5,
-    // image:"https://c8.alamy.com/comp/W06HG1/chawk-bazar-iftar-market-of-dhaka-is-well-known-for-traditional-spicy-foods-thousands-of-people-gathered-on-a-road-in-front-of-shahi-mosque-where-sel-W06HG1.jpg",
-    // title:"Chawkbazar: The 400-year-old bustling heart of Dhaka",
-    // time:"⏱21 February 2019🧆🧃.5mins to read.",
-    // qoute:"Chawkbazar is popular during Ramadan, the Muslim month of fasting, to break fast",
-    // description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast. Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish. They compete for space with the hundreds of electrical, telephone, and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
+//     // id:5,
+//     // image:"https://c8.alamy.com/comp/W06HG1/chawk-bazar-iftar-market-of-dhaka-is-well-known-for-traditional-spicy-foods-thousands-of-people-gathered-on-a-road-in-front-of-shahi-mosque-where-sel-W06HG1.jpg",
+//     // title:"Chawkbazar: The 400-year-old bustling heart of Dhaka",
+//     // time:"⏱21 February 2019🧆🧃.5mins to read.",
+//     // qoute:"Chawkbazar is popular during Ramadan, the Muslim month of fasting, to break fast",
+//     // description:"During the Muslim holy month of Ramadan, Chawkbazar - which is popular for various types of traditional food - turns into the main place for Iftar items - the meal which breaks the daily fast. Thousands of vendors peddle their goods on its streets, often filled with people waiting to get their fill of kebabs and different types of biryani - a popular rice dish. They compete for space with the hundreds of electrical, telephone, and internet cables that hang on to its narrow lanes, posing another danger for the local people in Chawkbazar. "
   
   
-]
+// ]
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -157,20 +157,27 @@ app.use(function(req, res, next) {
   next();
   });
 
-app.get("/backend/blogs",(req,res)=>{
-  res.send(blogs);
+// app.get("/backend/blogs",(req,res)=>{
+//   res.send(blogs);
+// })
+app.get("/",(req,res)=>{
+ Blog.find({},function(err,blogs){
+  res.render("home",{
+   blogs:blogs
+  })
+ })
 })
+
 
 app.get("/backend/blogs/:id",(req,res)=>{ 
- const blog= blogs.find((b)=>b.id=== parseInt(req.params.id));
-
-  if(!blog){
-   return res.status(404).send("Sorry this blog with given the id is not available!");  
-  } 
-  res.send(blog);
-})
-
-
+   const blog= Blog.find((b)=>b.id=== parseInt(req.params.id));
+  
+    if(!blog){
+     return res.status(404).send("Sorry this blog with given the id is not available!");  
+    } 
+    res.send(blog);
+  })
+  
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "images");
@@ -204,7 +211,7 @@ app.post("/backend/blogs",(req,res)=>{
   
   const blog =  new Blog(
     {
-      id: blogs.length+1,
+      id: Blog.length+1,
       image: req.body.image,
       title: req.body.title,
       time: req.body.time,
@@ -218,6 +225,7 @@ app.post("/backend/blogs",(req,res)=>{
   blog.save(function(err){
     if(!err){
       console.log("Blog saved Successfully");
+      res.redirect("/");
     }
   })
 
@@ -226,7 +234,7 @@ app.post("/backend/blogs",(req,res)=>{
 //UPDATING BLOG POST
 app.put("/backend/blogs/:id",(req,res)=>{
   console.log(10);
-  const blog = blogs.find( c => c.id ===parseInt(req.params.id)); //1.look up the blog
+  const blog = Blog.find( c => c.id ===parseInt(req.params.id)); //1.look up the blog
   console.log(20);
   if(!blog){ //if don't hav a blog with given id
     console.log(30);
@@ -277,13 +285,13 @@ console.log(100);
 app.delete("/backend/blogs/:id",(req,res)=>{ 
 //Look up the course
 //Not Existing ,return 404
-const blog= blogs.find((b)=>b.id=== parseInt(req.params.id));
+const blog= Blog.find((b)=>b.id=== parseInt(req.params.id));
 if(!blog){
  return res.status(404).send("Sorry this blog with given the id is not available!");
 } 
 //Delete
-const index = blogs.indexOf(blog);
-blogs.splice(index,1);
+const index = Blog.indexOf(blog);
+blog.splice(index,1);
 
 //Return the same course
   res.send(blog);
@@ -321,5 +329,3 @@ const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Backend server listening on ${port}...`);
 })
-
-
