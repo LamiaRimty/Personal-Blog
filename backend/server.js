@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json()); //json returns middleware
 
 //redirect request to endpoint starting with /blogs to blogRoutes.js
-//app.use("/blogs",require("./routes/blogRoutes"));
+app.use("/blogs",require("./routes/blogRoutes"));
 
 //Global Error hundler .Important function params must start with err
 
