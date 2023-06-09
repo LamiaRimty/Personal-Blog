@@ -10,7 +10,7 @@ class Blog{
         this.description=description; 
     }
 
-    async save(){
+   save(){
 
         let sql= `INSERT INTO blogs(
             image,
@@ -29,12 +29,18 @@ class Blog{
             )
             `;
  
-            const[newBlog,_] = await db.execute(sql);
-            return newBlog;
-    }
+            // const[newBlog,_] = db.execute(sql);
+            // return newBlog;
+                return db.execute(sql);
+        }
 
     static findAll(){
-
+      let sql= `SELECT * FROM blogs;`;
+      return db.execute(sql);
+    }
+    static findById(id){
+        let sql= `SELECT * FROM blogs WHERE id = ${id};`;
+        return db.execute(sql); //return that promise
     }
 
 }
